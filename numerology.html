@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <!--  <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+  <!--  <title>Тайнственият свят на числата</title>-->
+  <!--  <link rel="stylesheet" href="style.css">-->
+  <!--  <link href="css/css.css" rel="stylesheet" type="text/css"/>-->
+  <!--  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap-icons.css" rel="stylesheet">-->
+  <!--  &lt;!&ndash;  икони от https://icons.getbootstrap.com които вкарвам с <i class="bi bi-ИмеНаИконата"></i> &ndash;&gt;-->
+  <!--  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css" rel="stylesheet">-->
+
+  <!--  скриптове, зареждащи head-съдържанието със стилове и т.н, навигационния бар-->
+  <script src="/js/head-content.js"></script>
+  <script src="/js/navbar.js"></script>
+  <div id="head-container"></div>
+</head>
+
+<body>
+<header>
+  <div id="navbar-container"></div>
+</header>
+<main>
+  <section>
+    <h2>Нумерологичен анализ</h2>
+    <p>  се до мистичния свят на числата и разкрийте тяхната магия и любопитни факти за себе си!</p>
+    <p class="italic">Въведете своето име и дата на раждане, за да разберете своите Число на съдбата и Число на
+      името.</p>
+    <form id="numerologyForm">
+      <div>
+        <label for="name">Име:</label>
+        <input id="name" onclick="clearResultDescription()" required type="text">
+      </div>
+      <div>
+        <label for="birthdate">Дата на раждане:</label>
+        <input id="birthdate" onclick="clearResultDescription()" required type="date">
+      </div>
+
+      <button onclick="calculateNameNumber()" type="button">Изчисли Число на името</button>
+      <button onclick="calculateDestinyNumber()" type="button">Изчисли Число на съдбата</button>
+    </form>
+  </section>
+  <section>
+    <!--    резултати от изчисленията - да не се прекръстват id-тата!-->
+    <br><br>
+    <div class="image-text-container" id="imageNameResult">
+      <img alt="" class="img-result" src="img/1_640.jpg"/>
+    </div>
+    <!--  <div class="float-left" id="result"></div>-->
+    <div id="result"></div>
+    <div id="description"></div>
+  </section>
+</main>
+<!-- скрипт, съдържащ функциите, използвани onClick-->
+<script src="/js/calculations/calculationsNumerology.js"></script>
+</body>
+</html>
