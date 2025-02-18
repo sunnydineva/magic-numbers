@@ -7,16 +7,17 @@
 
   <meta charset="UTF-8">
   <script>
-    if (window.location.hostname === "sunnydineva.github.io") {
-      document.write('<base href="https://sunnydineva.github.io/magic-numbers/">');
-    } else {
-      document.write('<base href="/">');
-    }
+    let baseURL = window.location.hostname === "sunnydineva.github.io"
+      ? "https://sunnydineva.github.io/magic-numbers/"
+      : "/";
+
+    document.write(`<script src="${baseURL}js/head-content.js"><\/script>`);
+    document.write(`<script src="${baseURL}js/navbar.js"><\/script>`);
   </script>
 
   <!--  скриптове, зареждащи head-съдържанието със стилове и т.н, навигационния бар-->
-  <script src="js/head-content.js"></script>
-  <script src="js/navbar.js"></script>
+<!--  <script src="js/head-content.js"></script>-->
+<!--  <script src="js/navbar.js"></script>-->
   <div id="head-container"></div>
 </head>
 <body>
