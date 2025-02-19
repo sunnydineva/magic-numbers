@@ -4,10 +4,10 @@
 //   : "/";
 
 function loadScript(scriptPath) {
-  let script = document.createElement("script");
-  script.src = baseURL + scriptPath;
-  script.defer = true;
-  document.head.appendChild(script);
+  // let script = document.createElement("script");
+  // script.src = baseURL + scriptPath;
+  // script.defer = true;
+  // // document.head.appendChild(script);
   document.write(`<script src="${baseURL}${scriptPath}"><\/script>`)
 }
 

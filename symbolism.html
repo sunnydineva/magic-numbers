@@ -32,10 +32,8 @@
     loadScript("js/head-content.js");
     loadScript("js/navbar.js");
     loadScript("js/footer.js");
+    loadScript("js/slides.js");
   </script>
-  <!--  работи само от localhost-->
-  <!--  <script src="js/head-content.js"></script>-->
-  <!--  <script src="js/navbar.js"></script>-->
 
   <div id="head-container"></div>
 </head>
@@ -45,12 +43,29 @@
 </header>
 
 <main class="main-begin">
-  <div class="simple-container">
-    <h2>Числата и тяхната символика в различни култури</h2>
-    <div class="image-text-container">
-      <img alt="" class="container-element-40" src="img/galery/blue.jpg"/>
-      <img alt="" class="container-element-40" src="img/galery/blue2.jpg"/>
+    <div class="simple-container">
+      <h2>Числата и тяхната символика в различни култури</h2>
+      <div class="slider-container">
+        <div class="slide-img">
+          <img src="img/gallery/blue.jpg" alt="Комбинация 1">
+        </div>
+        <div class="slide-img">
+          <img src="img/gallery/blue2.jpg" alt="Комбинация 2">
+        </div>
+        <div class="slide-img">
+          <img src="img/gallery/blue3.jpg" alt="Комбинация 3">
+        </div>
+        <div class="slide-img">
+          <img src="img/gallery/grey1.jpg" alt="Комбинация 3">
+        </div>
+        <div class="slide-img">
+          <img src="img/gallery/grey1.jpg" alt="Комбинация 3">
+        </div>
+        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="next" onclick="changeSlide(1)">&#10095;</button>
+      </div>
     </div>
+
     <p>
       Числата винаги са били нещо повече от обикновени знаци за количествено измерване. В продължение на хилядолетия те
       са имали
@@ -88,27 +103,34 @@
     <li><strong>12</strong> – Представлява завършеност (12 апостоли, 12 племена на Израил).</li>
     <li><strong>666</strong> – Наричано "числото на звяра", свързано с Антихриста.</li>
   </ul>
-  </div>
+
+  <h2>Числата в различни бройни системи</h2>
 
   <div class="simple-container ">
-  <table>
-    <tr>
-      <th>Цифра</th>
-      <th>Двоична система</th>
-      <th>Римски цифри</th>
-      <th>Символично значение</th>
-    </tr>
-    <tr><td>0</td><td>0000</td><td>-</td><td>Пустота, безкрайност</td></tr>
-    <tr><td>1</td><td>0001</td><td>I</td><td>Единство, начало</td></tr>
-    <tr><td>2</td><td>0010</td><td>II</td><td>Двойственост, баланс</td></tr>
-    <tr><td>3</td><td>0011</td><td>III</td><td>Хармония, творчество</td></tr>
-    <tr><td>4</td><td>0100</td><td>IV</td><td>Стабилност, основа</td></tr>
-    <tr><td>5</td><td>0101</td><td>V</td><td>Промяна, приключение</td></tr>
-    <tr><td>6</td><td>0110</td><td>VI</td><td>Семейство, отговорност</td></tr>
-    <tr><td>7</td><td>0111</td><td>VII</td><td>Духовност, мъдрост</td></tr>
-    <tr><td>8</td><td>1000</td><td>VIII</td><td>Безкрайност, сила</td></tr>
-    <tr><td>9</td><td>1001</td><td>IX</td><td>Завършеност, мъдрост</td></tr>
-  </table>
+    <table>
+      <tr>
+        <th>Цифра</th>
+        <th>Двоична система</th>
+        <th>Осмична система</th>
+        <th>16-на система</th>
+        <th>Римски цифри</th>
+        <th>Китайски цифри</th>
+        <th>Майански цифри</th>
+        <th>Брахми цифри</th>
+        <th>Брайлова система</th>
+        <th>Символично значение</th>
+      </tr>
+      <tr><td>0</td><td>0000</td><td>0</td><td>0</td><td>-</td><td>〇</td><td>●</td><td>०</td><td>⠴</td><td class="td-left">Пустота, безкрайност</td></tr>
+      <tr><td>1</td><td>0001</td><td>1</td><td>1</td><td>I</td><td>一</td><td>•</td><td>१</td><td>⠂</td><td class="td-left">Единство, начало</td></tr>
+      <tr><td>2</td><td>0010</td><td>2</td><td>2</td><td>II</td><td>二</td><td>••</td><td>२</td><td>⠆</td><td class="td-left">Двойственост, баланс</td></tr>
+      <tr><td>3</td><td>0011</td><td>3</td><td>3</td><td>III</td><td>三</td><td>•••</td><td>३</td><td>⠒</td><td class="td-left">Хармония, творчество</td></tr>
+      <tr><td>4</td><td>0100</td><td>4</td><td>4</td><td>IV</td><td>四</td><td>••••</td><td>४</td><td>⠲</td><td class="td-left">Стабилност, основа</td></tr>
+      <tr><td>5</td><td>0101</td><td>5</td><td>5</td><td>V</td><td>五</td><td>—</td><td>५</td><td>⠢</td><td class="td-left">Промяна, приключение</td></tr>
+      <tr><td>6</td><td>0110</td><td>6</td><td>6</td><td>VI</td><td>六</td><td>— •</td><td>६</td><td>⠖</td><td class="td-left">Семейство, отговорност</td></tr>
+      <tr><td>7</td><td>0111</td><td>7</td><td>7</td><td>VII</td><td>七</td><td>— ••</td><td>७</td><td>⠶</td><td class="td-left">Духовност, мъдрост</td></tr>
+      <tr><td>8</td><td>1000</td><td>10</td><td>8</td><td>VIII</td><td>八</td><td>— •••</td><td>८</td><td>⠦</td><td class="td-left">Безкрайност, сила</td></tr>
+      <tr><td>9</td><td>1001</td><td>11</td><td>9</td><td>IX</td><td>九</td><td>— —</td><td>९</td><td>⠔</td><td class="td-left">Завършеност, мъдрост</td></tr>
+    </table>
   </div>
 
 </main>

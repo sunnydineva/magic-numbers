@@ -194,6 +194,8 @@ li.dropdown { /* главно меню - dropdown*/
 /*}*/
 
 .header-logo-container {
+  position: relative;
+  z-index: 10;
   display: flex;
   align-items: center; /* центрира логото и текста вертикално */
   gap: 1vw; /* разстояние между логото и текста */
@@ -299,6 +301,103 @@ li.dropdown { /* главно меню - dropdown*/
 }
 
 
+/* =================== СЛАЙДЕР =======================*/
+ /*Слайдер контейнер*/
+.slider-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  /*position: relative; с това минава над-*/
+  /*z-index: 1;*/
+  max-width: 700px;
+  margin: 20px auto;
+  overflow: hidden;
+}
+
+.slide-img {
+  display: none;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+.slide-2-imgs{
+    width: 50%;
+    flex: 0 0 50%;
+}
+
+.slide-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;/*запълване без изкривяване*/
+}
+
+.slide-img:first-child {
+  display: block;
+}
+
+.slider-container button {
+  position: absolute;
+  /*z-index: 2;*/
+  top:80%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 24px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.slider-container-daily button {
+  position: absolute;
+  /*z-index: 2;*/
+  top:90%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 24px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.slider-container button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* позиции на бутоните */
+
+.prev, .next {
+  position: absolute;
+  /*top: 15000%; !* под картинките *!*/
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 20px;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+/*.prev { left: 10px; top: 60%; }*/
+/*.next { right: 10px; top: 60%; }*/
+
+.prev {
+  left: 10vw;
+}
+
+.next {
+  right: 15vw;
+}
+
 /* =================== ТАБЛИЦИ =======================*/
 table {
   width: 100%;
@@ -311,6 +410,9 @@ th, td {
 }
 th {
   background-color: #535362;
+}
+.td-left{
+  text-align: left;
 }
 
 tr:hover { /* при преминаване през реда - помътнява и се уголемява плавно*/
@@ -415,6 +517,8 @@ footer {
   }
 
   .simple-container {
+    position: relative;
+    z-index: 1;
     display: block;
     width: 95%;
     padding: 6vw 6vw;
