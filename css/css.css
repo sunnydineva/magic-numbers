@@ -1,95 +1,96 @@
 /* =================== МАСОВИ ЕЛЕМЕНТИ =======================*/
 
 body {
-  /*padding-top: 60px; !* височината на навигацията + малко допълнително пространство *!*/
-  background-image: url("../img/background.png");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  background-color: #2c3e50; /* резервен цвят, ако изображението не се зареди */
-  /*color: white; !* цвят на текста за по-добър контраст *!*/
-  font-family: Arial, sans-serif;
+    /*padding-top: 60px; !* височината на навигацията + малко допълнително пространство *!*/
+    background-image: url("../img/background.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: #2c3e50; /* резервен цвят, ако изображението не се зареди */
+    /*color: white; !* цвят на текста за по-добър контраст *!*/
+    font-family: Arial, sans-serif;
 }
 
 p, li {
-  font-size: 1.2rem; /* 16px */
-  text-align: justify;
+    font-size: 1.2rem; /* 16px */
+    text-align: justify;
 }
 
 li a {
-  display: flex;
-  align-items: center; /* подравнява иконата и текста вертикално */
-  gap: 5px; /* разстояние между иконата и текста */
-  color: white; /* бял текст и икона */
-  text-decoration: none;
-  font-size: 1.2em; /* автоматичен размер на SVG */
+    display: flex;
+    align-items: center; /* подравнява иконата и текста вертикално */
+    gap: 5px; /* разстояние между иконата и текста */
+    color: white; /* бял текст и икона */
+    text-decoration: none;
+    font-size: 1.2em; /* автоматичен размер на SVG */
 }
 
 li a svg {
-  fill: currentColor; /* наследява цвета от текста */
-  width: 1em;
-  height: 1em;
+    fill: currentColor; /* наследява цвета от текста */
+    width: 1em;
+    height: 1em;
 }
 
 
 button, input, label {
-  font-size: 1.3rem; /* размерът на шрифта следва глобалния размер */
-  padding: 10px 20px; /* вътрешен отстъп за удобство */
-  min-width: 300px; /* гарантира, че елементът няма да стане прекалено малък */
-  height: 35px; /* фиксирана височина за еднакъв дизайн */
-  border-radius: 5px; /* Закръглени ъгли */
-  margin-left: 1vw;
+    font-size: 1.3rem; /* размерът на шрифта следва глобалния размер */
+    padding: 10px 20px; /* вътрешен отстъп за удобство */
+    min-width: 300px; /* гарантира, че елементът няма да стане прекалено малък */
+    height: 35px; /* фиксирана височина за еднакъв дизайн */
+    border-radius: 5px; /* Закръглени ъгли */
+    margin-left: 1vw;
 }
-textarea{
-  min-height: 30vh;
-  min-width: 30vw;
+
+textarea {
+    min-height: 30vh;
+    min-width: 30vw;
 }
 
 label {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 button {
-  background-color: #3D3E47; /* Сив фон */
-  color: white; /* Бял текст */
-  border: none;
-  height: 50px;
-  cursor: pointer;
-  transition: background 0.3s ease-in-out; /* Време за превключване на цветовете */
+    background-color: #3D3E47; /* Сив фон */
+    color: white; /* Бял текст */
+    border: none;
+    height: 50px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out; /* Време за превключване на цветовете */
 }
 
 button:hover {
-  background-color: #0056b3; /* По-тъмен син при ховър */
+    background-color: #0056b3; /* По-тъмен син при ховър */
 }
 
 /* =================== ЗАГЛАВИЯ =======================*/
 /* адаптирани спрямо view point */
 h1 {
-  font-size: 4vw;
-  text-align: center;
+    font-size: 4vw;
+    text-align: center;
 }
 
 h2 {
-  font-size: 3vw;
-  text-align: center;
+    font-size: 3vw;
+    text-align: center;
 }
 
 h3 {
-  font-size: 2.5vw;
-  text-align: left;
-  font-weight: normal;
-  margin-bottom: 10px;
+    font-size: 2.5vw;
+    text-align: left;
+    font-weight: normal;
+    margin-bottom: 10px;
 }
 
 h4 {
-  font-size: 1vw;
-  text-align: left;
+    font-size: 1vw;
+    text-align: left;
 }
 
 h1:hover {
-  transform: scale(1.2); /* увеличава заглавието при ховър */
-  color: #3d3e47; /* променя цвета на текста на златист */
-  transition: transform 0.5s ease-in-out, color 0.3s ease-in-out;
+    transform: scale(1.2); /* увеличава заглавието при ховър */
+    color: #3d3e47; /* променя цвета на текста на златист */
+    transition: transform 0.5s ease-in-out, color 0.3s ease-in-out;
 }
 
 /* =================== ГЛАВНО МЕНЮ =======================*/
@@ -106,88 +107,88 @@ h1:hover {
 /*}*/
 
 nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
 }
 
 nav::before, /* clearfix - предпазва от пропадане на родителя nav, след който float-ват li-тата*/
 nav::after {
-  content: "";
-  display: table;
+    content: "";
+    display: table;
 }
 
 nav::after { /* clearfix - предпазва от пропадане на родителя nav, след който float-ват li-тата*/
-  clear: both;
+    clear: both;
 }
 
 nav li {
-  float: left;
+    float: left;
 }
 
 nav li a { /* главно меню */
-  display: block;
-  color: white;
-  text-align: center;
+    display: block;
+    color: white;
+    text-align: center;
 
-  padding: 1.46vh 1.67vw;
-  text-decoration: none;
+    padding: 1.46vh 1.67vw;
+    text-decoration: none;
 }
 
 nav li a:hover:not(.active) {
-  background-color: #111; /* активен dd - черно */
+    background-color: #111; /* активен dd - черно */
 }
 
 li a:hover, .dropdown:hover .dropbtn {
-  background-color: #111; /* активно меню - черно */
+    background-color: #111; /* активно меню - черно */
 }
 
 li.dropdown { /* главно меню - dropdown*/
-  display: inline-block;
+    display: inline-block;
 }
 
 .dropdown-content { /* главно меню - съдържание на dropdown*/
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  /*min-width: 160px;*/
-  min-width: 8.33vw;
-  /*box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);*/
-  box-shadow: 0px 0.42vh 0.83vh 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    /*min-width: 160px;*/
+    min-width: 8.33vw;
+    /*box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);*/
+    box-shadow: 0px 0.42vh 0.83vh 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
 }
 
 .dropdown-content a { /* главно меню - съдържание на dropdown - елементи */
-  color: black;
-  /*padding: 12px 16px;*/
-  padding: 1.11vh 0.83vw;
-  text-decoration: none;
-  display: block;
-  text-align: left;
+    color: black;
+    /*padding: 12px 16px;*/
+    padding: 1.11vh 0.83vw;
+    text-decoration: none;
+    display: block;
+    text-align: left;
 }
 
 .dropdown-content a:hover {
-  background-color: #777;
-  color: #fff;
+    background-color: #777;
+    color: #fff;
 }
 
 .dropdown:hover .dropdown-content {
-  display: block;
+    display: block;
 }
 
 /* =================== ДРУГИ КЛАСОВЕ =======================*/
 .italic {
-  font-style: italic;
+    font-style: italic;
 }
 
 .bold {
-  font-style: oblique;
+    font-style: oblique;
 }
 
 .float-left {
-  float: left;
+    float: left;
 }
 
 /*.img-result {*/
@@ -198,283 +199,290 @@ li.dropdown { /* главно меню - dropdown*/
 /*}*/
 
 .header-logo-container {
-  position: relative;
-  z-index: 10;
-  display: flex;
-  align-items: center; /* центрира логото и текста вертикално */
-  gap: 1vw; /* разстояние между логото и текста */
-  max-height: 80vh;
+    position: relative;
+    z-index: 10;
+    display: flex;
+    align-items: center; /* центрира логото и текста вертикално */
+    gap: 1vw; /* разстояние между логото и текста */
+    max-height: 80vh;
 }
+
 .-header-logo-container a {
-  text-decoration: none; /* Премахва подчертаването */
+    text-decoration: none; /* Премахва подчертаването */
 }
 
 .-header-logo-container a:visited {
-  color: inherit; /* лилавия цвят на посетените линкове */
+    color: inherit; /* лилавия цвят на посетените линкове */
 }
 
 .logo {
-  width: auto;
-  height: 0.8em; /* като H1 */
+    width: auto;
+    height: 0.8em; /* като H1 */
 }
 
 .numerology-result-container {
-  display: block;
-  margin-bottom: 1.5vh;
-  margin-left: 4vh;
-  max-width: 80%;
-  text-align: center;
-  padding: 6vh 6vw; /* вътре в контейнера */
-  justify-content: center; /* вертикално подравняване в контейнера */
+    display: block;
+    margin-bottom: 1.5vh;
+    margin-left: 4vh;
+    max-width: 80%;
+    text-align: center;
+    padding: 6vh 6vw; /* вътре в контейнера */
+    justify-content: center; /* вертикално подравняване в контейнера */
 }
 
 .numerology-result-container > * { /* децата му*/
-  display: block; /* всеки елемент да е на нов ред */
-  margin-bottom: 1.5vh; /* разстояние между елементите */
+    display: block; /* всеки елемент да е на нов ред */
+    margin-bottom: 1.5vh; /* разстояние между елементите */
 }
 
 .image-text-container {
-  display: flex; /* подравнява изображението и текста в една линия */
-  justify-content: center; /* вертикално подравняване в контейнера */
-  align-items: center; /* Центрира текста по височина спрямо картинката */
-  gap: 20px; /* разстояние между елементите във flex контейнера */
-  padding: 2vh 3vw; /* вътре в контейнера */
+    display: flex; /* подравнява изображението и текста в една линия */
+    justify-content: center; /* вертикално подравняване в контейнера */
+    align-items: center; /* Центрира текста по височина спрямо картинката */
+    gap: 20px; /* разстояние между елементите във flex контейнера */
+    padding: 2vh 3vw; /* вътре в контейнера */
 }
 
 .simple-container {
-  /*margin-top: 20px;*/
-  width: 90%;
-  padding: 2vh 3vw;
-  max-width: 95%;
-  text-align: justify;
+    /*margin-top: 20px;*/
+    width: 90%;
+    padding: 2vh 3vw;
+    max-width: 95%;
+    text-align: justify;
 }
 
 .container-element-40 {
-  max-width: 40%;
-  height: auto;
+    max-width: 40%;
+    height: auto;
 }
 
 .container-element-20 {
-  max-width: 20%;
-  height: auto;
+    max-width: 20%;
+    height: auto;
 }
 
 .contact-container {
-  display: block;
-  /*margin-top: 20px;*/
-  width: 90%;
-  padding: 2vh 3vw;
-  max-width: 60%;
-  text-align: right;
+    display: block;
+    /*margin-top: 20px;*/
+    width: 90%;
+    padding: 2vh 3vw;
+    max-width: 60%;
+    text-align: right;
 }
 
 .img-result {
-  /*float: left;*/
-  margin: 2vw 4.7vw;
-  display: block;
-  max-width: 90%; /* Картинката никога няма да е по-голяма от родителя */
-  height: auto;
-  border-radius: 10px; /* закръглени ъгли */
+    /*float: left;*/
+    margin: 2vw 4.7vw;
+    display: block;
+    max-width: 90%; /* Картинката никога няма да е по-голяма от родителя */
+    height: auto;
+    border-radius: 10px; /* закръглени ъгли */
 }
 
 .text-left {
-  padding: 4vh 4vw;
+    padding: 4vh 4vw;
 }
 
 .container-element-60 {
-  max-width: 60%;
+    max-width: 60%;
 }
 
 .container-element-60 {
-  max-width: 60%;
+    max-width: 60%;
 }
 
 .position-fixed {
-  position: fixed;
+    position: fixed;
 }
 
 .position-sticky {
-  position: sticky;
+    position: sticky;
 }
 
 .header-sticky {
-  /*height: 60px;*/
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: #708896;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /*height: 60px;*/
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #708896;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .main-begin {
-  margin-top: 30vh;
+    margin-top: 30vh;
 }
 
 .main-contact {
-  margin-top: 10vh;
-  /*position: relative;*/
+    margin-top: 10vh;
+    /*position: relative;*/
 }
 
-.form-container{
-  display: block;
+.form-container {
+    display: block;
 
 }
 
 .full-name {
-  min-width: 450px;
+    min-width: 450px;
 }
 
 
 /* =================== СЛАЙДЕР =======================*/
- /*Слайдер контейнер*/
+/*Слайдер контейнер*/
 .slider-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  /*position: relative; с това минава над-*/
-  /*z-index: 1;*/
-  max-width: 700px;
-  margin: 20px auto;
-  overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /*position: relative; с това минава над-*/
+    /*z-index: 1;*/
+    max-width: 700px;
+    margin: 20px auto;
+    overflow: hidden;
 }
 
 .slide-img {
-  display: none;
-  width: 100%;
-  height: 100%;
-  text-align: center;
+    display: none;
+    width: 100%;
+    height: 100%;
+    text-align: center;
 }
-.slide-2-imgs{
+
+.slide-2-imgs {
     width: 50%;
     flex: 0 0 50%;
 }
 
 .slide-img img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  object-fit: cover;/*запълване без изкривяване*/
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover; /*запълване без изкривяване*/
 }
 
 .slide-img:first-child {
-  display: block;
+    display: block;
 }
 
 .slider-container button {
-  position: absolute;
-  /*z-index: 2;*/
-  top:80%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  font-size: 24px;
-  cursor: pointer;
-  border-radius: 5px;
+    position: absolute;
+    /*z-index: 2;*/
+    top: 80%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 24px;
+    cursor: pointer;
+    border-radius: 5px;
 }
 
 .slider-container-daily button {
-  position: absolute;
-  /*z-index: 2;*/
-  top:90%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  font-size: 24px;
-  cursor: pointer;
-  border-radius: 5px;
+    position: absolute;
+    /*z-index: 2;*/
+    top: 90%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 24px;
+    cursor: pointer;
+    border-radius: 5px;
 }
+
 .slider-container button:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 /* позиции на бутоните */
 
 .prev, .next {
-  position: absolute;
-  /*top: 15000%; !* под картинките *!*/
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  padding: 20px;
-  cursor: pointer;
-  font-size: 18px;
-  border-radius: 50%;
-  transition: 0.3s;
+    position: absolute;
+    /*top: 15000%; !* под картинките *!*/
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 20px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 50%;
+    transition: 0.3s;
 }
 
 .prev:hover, .next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.8);
 }
+
 /*.prev { left: 10px; top: 60%; }*/
 /*.next { right: 10px; top: 60%; }*/
 
 .prev {
-  left: 10vw;
+    left: 10vw;
 }
 
 .next {
-  right: 15vw;
+    right: 15vw;
 }
 
 /* =================== ТАБЛИЦИ =======================*/
 table {
-  width: 100%;
-  border-collapse: collapse;
+    width: 100%;
+    border-collapse: collapse;
 }
+
 th, td {
-  border: 1px solid black;
-  padding: 8px;
-  text-align: center;
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
 }
+
 th {
-  background-color: #535362;
+    background-color: #535362;
 }
-.td-left{
-  text-align: left;
+
+.td-left {
+    text-align: left;
 }
 
 tr:hover { /* при преминаване през реда - помътнява и се уголемява плавно*/
-  background-color: #00000026;
-  transform: scale(1.02);
-  transition: all 0.2s ease-in-out;
+    background-color: #00000026;
+    transform: scale(1.02);
+    transition: all 0.2s ease-in-out;
 }
 
 /* =================== FOOTER =======================*/
 footer {
-  /*background-color:  #708896;*/
-  text-align: center;
-  padding: 20px 10px;
-  font-size: 1em;
+    /*background-color:  #708896;*/
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 1em;
 }
 
 .footer-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
 }
 
 .social-icons {
-  display: flex;
-  gap: 15px; /* разстояние между иконите */
+    display: flex;
+    gap: 15px; /* разстояние между иконите */
 }
 
 .social-icons a svg, .special-text {
-  width: 30px;
-  height: 30px;
-  fill: #3d3e47; /* цветът на иконите */
-  transition: transform 0.3s ease-in-out, fill 0.3s;
+    width: 30px;
+    height: 30px;
+    fill: #3d3e47; /* цветът на иконите */
+    transition: transform 0.3s ease-in-out, fill 0.3s;
 }
 
 .social-icons a svg:hover, .special-text {
-  transform: scale(1.5); /* увеличава иконата при ховър */
-  fill: #FFD700; /* променя цвета на иконата на златист */
+    transform: scale(1.5); /* увеличава иконата при ховър */
+    fill: #FFD700; /* променя цвета на иконата на златист */
 }
 
 /* =================== ДРУГИ =======================*/
@@ -484,137 +492,241 @@ footer {
 /*  text-shadow: none;*/
 /*}*/
 ::selection {
-  background: #b3d4fc;
-  text-shadow: none;
+    background: #b3d4fc;
+    text-shadow: none;
 }
 
 /*ot w3schools:*/
 .row::after {
-  content: "";
-  clear: both;
-  display: table;
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+/* =============== ХАМБУРГЕР НАВИГАЦИЯ ======================= */
+
+/* скрита навигация по подразбиране */
+.mobile-menu {
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 50px;
+    left: 0;
+    text-align: center;
+    padding: 10px 0;
+    z-index: 10000;
+}
+
+.menu-toggle {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 20px;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    z-index: 1000;
+    border-radius: 5px;
+}
+
+/* стил за мобилното меню */
+.mobile-nav {
+    display: none;
+    flex-direction: column;
+    background-color: black;
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    width: 200px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.mobile-nav li {
+    list-style: none;
+    padding: 10px;
+    border-bottom: 1px solid white;
+    text-align: center;
+}
+
+.mobile-nav li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+}
+
+.mobile-nav li:last-child {
+    border-bottom: none;
+}
+
+/*показване на мобилното меню при клик */
+.mobile-nav.active {
+    display: flex;
 }
 
 /* =============== РЕСИПОНСИВ ПРЕНАПИСВАНЕ НА СТИЛОВЕ ======================= */
 
 /* мобилни телефони (до 480px) */
 @media (max-width: 480px) {
-  body {
-    font-size: 3vw; /* nо-голям основен текст за мобилни */
-    /*font-size: 1rem; !* nо-голям основен текст за мобилни *!*/
-  }
+    body {
+        font-size: 3vw; /* nо-голям основен текст за мобилни */
+        /*font-size: 1rem; !* nо-голям основен текст за мобилни *!*/
+    }
 
-  p, li {
-    font-size: 0.8rem; /* 32px */
-  }
+    p, li {
+        font-size: 0.8rem; /* 32px */
+    }
 
-  h1 {
-    font-size: 6vw;
-  }
+    h1 {
+        font-size: 6vw;
+    }
 
-  h2 {
-    font-size: 5vw;
-  }
+    h2 {
+        font-size: 5vw;
+    }
 
-  h3 {
-    font-size: 4.5vw;
-  }
+    h3 {
+        font-size: 4.5vw;
+    }
 
-  h4 {
-    font-size: 1vw;
-  }
+    h4 {
+        font-size: 1vw;
+    }
 
-  nav ul li a {
-    font-size: 4vw; /* навигацията трябва да е удобна за докосване */
-    padding: 10px 5px; /* Добавяме повече разстояние за по-добро UX */
-  }
+    nav ul li a {
+        font-size: 4vw; /* навигацията трябва да е удобна за докосване */
+        padding: 10px 5px; /* Добавяме повече разстояние за по-добро UX */
+    }
 
-  .img-result {
-    width: 90%; /* картинките да се поберат на екрана */
-    margin: 2vh auto; /* Центриране */
-    float: none; /* Премахване на float */
-  }
+    .img-result {
+        width: 90%; /* картинките да се поберат на екрана */
+        margin: 2vh auto; /* Центриране */
+        float: none; /* Премахване на float */
+    }
 
-  .image-text-container {
-    display: block;
-    width: 95%;
-  }
+    .image-text-container {
+        display: block;
+        width: 95%;
+    }
 
-  .simple-container {
-    position: relative;
-    z-index: 1;
-    display: block;
-    width: 95%;
-    padding: 6vw 6vw;
-    max-width: 60%;
-  }
+    .simple-container {
+        position: relative;
+        z-index: 1;
+        display: block;
+        width: 95%;
+        padding: 6vw 6vw;
+        max-width: 60%;
+    }
 
-  .container-element-40, .container-element-60 { /* за мобилни става центрирано */
-      max-width: 100%;
+    .container-element-40, .container-element-60 { /* за мобилни става центрирано */
+        max-width: 100%;
     }
 
     .input, label, button {
-      /*  по-големи за мобилен телефон*/
-    }
-  }
-
-  /* 📲 За таблети (481px - 1024px) */
-  @media (max-width: 1024px) {
-    body {
-      font-size: 2.5vw; /* Оставяме текста удобен за четене */
+        /*  по-големи за мобилен телефон*/
     }
 
-    h1 {
-      font-size: 6.5vw;
+    /*  ХАМБУРГЕР */
+    .menu-toggle {
+        display: block;
     }
 
-    nav ul li a {
-      font-size: 1.2rem;
-      padding: 12px 10px;
+    .mobile-menu {
+        display: block;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: rgba(34, 34, 34, 0.6);
+        z-index: 1000;
     }
 
-    .img-result {
-      width: 80%;
-      margin: 2vh auto;
-    }
-  }
-
-  /*!* 💻 За лаптопи и стандартни десктопи (1025px - 1600px) *!*/
-  /*@media (max-width: 1600px) {*/
-  /*  body {*/
-  /*    font-size: 1.2rem;*/
-  /*  }*/
-  /*  h1 {*/
-  /*    font-size: 4vw;*/
-  /*  }*/
-  /*  nav ul li a {*/
-  /*    font-size: 1rem;*/
-  /*    padding: 10px;*/
-  /*  }*/
-  /*  .img-result {*/
-  /*    width: 50%;*/
-  /*    margin: 2vh auto;*/
-  /*  }*/
-  /*}*/
-  /* 🖥️ За 4K монитори и телевизори (над 1600px) */
-  @media (min-width: 1601px) {
-    body {
-      font-size: 1.5rem;
+    /*     навигация (меню) */
+    nav ul {
+        display: none; /* скриваме старото меню */
     }
 
-    h1 {
-      font-size: 3.5vw;
+    nav li {
+        width: 100%;
+        text-align: center;
+        padding: 5px;
     }
 
-    nav ul li a {
-      font-size: 1.2rem;
-      padding: 15px;
+    /* за таблети (481px - 768px) */
+    @media (max-width: 1024px) {
+        body {
+            font-size: 2.5vw; /* Оставяме текста удобен за четене */
+        }
+
+        h1 {
+            font-size: 6.5vw;
+        }
+
+        /* ХАМБУРГЕР - ТАБЛЕТ */
+        .menu-toggle {
+            display: block;
+        }
+
+        .mobile-menu {
+            display: block;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(34, 34, 34, 0.6);
+            z-index: 1000;
+        }
+
+        /*     навигация (меню) */
+        nav ul {
+            display: none; /*Скриваме старото меню */
+
+        }
+
+        nav li {
+            width: 100%;
+            text-align: center;
+            padding: 5px;
+        }
+
+        nav ul li a {
+            font-size: 1.2rem;
+            padding: 12px 10px;
+        }
+
+        .img-result {
+            width: 80%;
+            margin: 2vh auto;
+        }
+
+        .image-text-container {
+            display: block;
+            width: 95%;
+        }
     }
 
-    .img-result {
-      width: 40%;
+    /* за широки екрани ширина над 1601 */
+    @media (min-width: 1601px) {
+        body {
+            font-size: 1.5rem;
+        }
+
+        h1 {
+            font-size: 3.5vw;
+        }
+
+        nav ul li a {
+            font-size: 1.2rem;
+            padding: 15px;
+        }
+
+        .img-result {
+            width: 40%;
+        }
     }
-  }
+}
 
 
 
