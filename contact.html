@@ -1,77 +1,58 @@
 <!DOCTYPE html>
 <html lang="bg">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Тайнственият свят на числата</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тайнственият свят на числата</title>
 
-  <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <script>
+        // откриваме правилния baseURL за локален сървър или GitHub Pages
+        let baseURL = window.location.hostname === "sunnydineva.github.io"
+            ? "https://sunnydineva.github.io/magic-numbers/"
+            : "/";
+        document.write(`<script src="${baseURL}js/config.js"><\/script>`)
+    </script>
 
-  <!--  скрипт, адаптиращ сайта да работи от github или от localhost-->
-  <!--  <script>-->
-  <!--    let baseURL = window.location.hostname === "sunnydineva.github.io"-->
-  <!--      ? "https://sunnydineva.github.io/magic-numbers/"-->
-  <!--      : "/";-->
-
-  <!--    document.write(`<script src="${baseURL}js/head-content.js"><\/script>`);-->
-  <!--    document.write(`<script src="${baseURL}js/navbar.js"><\/script>`);-->
-  <!--    document.write(`<script src="${baseURL}js/footer.js"><\/script>`);-->
-  <!--  </script>-->
-
-
-  <script>
-    // откриваме правилния baseURL за локален сървър или GitHub Pages
-    let baseURL = window.location.hostname === "sunnydineva.github.io"
-      ? "https://sunnydineva.github.io/magic-numbers/"
-      : "/";
-    document.write(`<script src="${baseURL}js/config.js"><\/script>`)
-  </script>
-
-  <!--  скриптове, зареждащи head-съдържанието със стилове и т.н, навигационния бар-->
-  <script>
-    loadScript("js/head-content.js");
-    loadScript("js/navbar.js");
-    loadScript("js/footer.js");
-  </script>
-  <!--  работи само от localhost-->
-  <!--  <script src="js/head-content.js"></script>-->
-  <!--  <script src="js/navbar.js"></script>-->
-
-  <div id="head-container"></div>
+    <!--  скриптове, зареждащи head-съдържанието със стилове и т.н, навигационния бар-->
+    <script>
+        loadScript("js/head-content.js");
+        loadScript("js/navbar.js");
+        loadScript("js/footer.js");
+    </script>
+    <div id="head-container"></div>
 </head>
 <body>
 <header>
-  <div id="navbar-container"></div>
+    <div id="navbar-container"></div>
 </header>
 
 <main class="main-begin">
-  <div class="simple-container">
-    <h2>Цифрите и математиката</h2>
-    <div class="image-text-container">
-      <img alt="" class="container-element-40" src="img/gallery/grey1.jpg"/>
-      <img alt="" class="container-element-40" src="img/gallery/grey2.jpg"/>
+    <div class="container-element-60">
+        <h2>Изпратете ни съобщение</h2>
+        <div class="contact-form">
+            <form>
+                <div>
+                    <label for="name">Име:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div>
+                    <label for="email">Имейл:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label for="message">Съобщение:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                    <div>
+                        <button type="submit">Изпрати</button>
+                    </div>
+                </div>
+            </form>
+        </div>
     </div>
-  </div>
-
-  <div class="simple-container">
-    <b>Числата</b> играят основна роля в науката, философията и изкуството. Те ни помагат да измерваме, анализираме и
-    разбираме света около нас. Едно от най-интересните математически съотношения е <b>златното сечение</b>,
-    което се изразява чрез числото <b>1.6180339887</b> и е свързано с хармонията и пропорциите в природата, изкуството и
-    архитектурата. <br>
-    Това съотношение може да бъде намерено в структурата на цветята, човешкото тяло и дори в галактиките. <br>
-    <b>Последователността на Фибоначи</b>, която се изгражда по правилото, че всяко число е сумата от предходните
-    две, също има връзка със златното сечение. <br>
-    При нарастване на числата в редицата, съотношението между съседни числа се приближава до него.
-    Тази редица започва с <b>0, 1, 1, 2, 3, 5, 8, 13, 21...</b> и се среща навсякъде в природата – в разположението на
-    листата по стеблото, спиралите на мидите и формата на ураганите. <br>
-    От древността до днес хората използват числата не само за изчисления, но и за <b>символични значения</b>,
-    вдъхновение и открития. Те формират основата на математиката и се използват в различни науки, инженерство,
-    изкуство и дори в музиката.
-  </div>
-
 </main>
 <footer>
-  <div id="footer-container"></div>
+    <div id="footer-container"></div>
 </footer>
 </body>
 </html>

@@ -40,6 +40,10 @@ button, input, label {
   border-radius: 5px; /* Закръглени ъгли */
   margin-left: 1vw;
 }
+textarea{
+  min-height: 30vh;
+  min-width: 30vw;
+}
 
 label {
   cursor: pointer;
