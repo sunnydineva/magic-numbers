@@ -1,63 +1,78 @@
 <header class=header-sticky>
 
-  <div class="height-60">
-    <div class="-header-logo-container">
-      <h1>
-        <a href="index.html">
-<!--          ! лого в гитхъб-->
-<!--          <script>-->
-<!--            // откриваме правилния baseURL за локален сървър или GitHub Pages-->
-<!--            let baseURL = window.location.hostname === "sunnydineva.github.io"-->
-<!--              ? "https://sunnydineva.github.io/magic-numbers/"-->
-<!--              : "/";-->
-<!--            document.write(`<img alt="Лого" class="logo" src="${baseURL}img/logo.jpg"/>`)-->
-<!--          </script>-->
-          <img alt="©" class="logo" src="img/logo.jpg"/>
-        </a>  Тайнственият свят на числата
-      </h1>
+    <div class="height-60">
+        <div class="-header-logo-container">
+            <h1>
+                <a href="index.html">
+                    <!--          ! лого в гитхъб-->
+                    <!--          <script>-->
+                    <!--            // откриваме правилния baseURL за локален сървър или GitHub Pages-->
+                    <!--            let baseURL = window.location.hostname === "sunnydineva.github.io"-->
+                    <!--              ? "https://sunnydineva.github.io/magic-numbers/"-->
+                    <!--              : "/";-->
+                    <!--            document.write(`<img alt="Лого" class="logo" src="${baseURL}img/logo.jpg"/>`)-->
+                    <!--          </script>-->
+                    <img alt="©" class="logo" src="img/logo.jpg"/>
+                </a> Тайнственият свят на числата
+            </h1>
+        </div>
+        <nav>
+            <ul>
+                <!--      <a href="index.html">&#x1F3E0; Начало</a></li>-->
+                <!--      html entity - не се поддържа от всички браузъри-->
+
+                <!--bootstrap - не разрешено използване-->
+                <!--      <li><a href="index.html"><i class="bi bi-house-fill"></i> Начало</a></li>-->
+
+                <!--inline svg - векторно изписване на необходимата икона-->
+                <li>
+                    <a href="index.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 16 16"
+                             fill="currentColor">
+                            <!--            векторният път (контурите) на изображението-->
+                            <path d="M8 0L0 6h2v10h4V10h4v6h4V6h2L8 0z"/>
+                        </svg>
+                        Начало
+                    </a>
+                </li>
+
+                <li><a href="symbolism.html">Символика</a></li>
+                <li><a href="math.html">Математика</a></li>
+                <li><a href="daily.html">Числа в ежедневието</a></li>
+
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Нумерология</a>
+                    <div class="dropdown-content">
+                        <a href="name.html">Анализ на име</a>
+                        <a href="destiny.html">Анализ на дата на раждане</a>
+                    </div>
+
+                <li class="dropdown">
+                    <!--        <a href="javascript:void(0)" class="dropbtn"><i class="bi bi-info-circle-fill"></i> За нас</a>-->
+                    <a href="javascript:void(0)" class="dropbtn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                             class="bi bi-info-circle-fill" viewBox="0 0 16 16">
+                            <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2"/>
+                        </svg>
+                        За нас</a>
+
+                    <div class="dropdown-content">
+                        <a href="contact.html">Контакти</a>
+                    </div>
+            </ul>
+        </nav>
+
+<!--        <div class="mobile-menu">-->
+<!--            <button class="menu-toggle">☰</button>-->
+<!--            <ul class="mobile-nav">-->
+<!--                <li><a href="index.html">Начало</a></li>-->
+<!--                <li><a href="symbolism.html">Символика</a></li>-->
+<!--                <li><a href="math.html">Математика</a></li>-->
+<!--                <li><a href="daily.html">Числа в ежедневието</a></li>-->
+<!--                <li><a href="name.html">Анализ на име<</a></li>-->
+<!--                <li><a href="destiny.html">Анализ на дата на раждане</a></li>-->
+<!--                <li><a href="contact.html">Контакт</a></li>-->
+<!--            </ul>-->
+<!--        </div>-->
     </div>
-    <nav>
-    <ul>
-<!--      <a href="index.html">&#x1F3E0; Начало</a></li>-->
-<!--      html entity - не се поддържа от всички браузъри-->
-
-<!--bootstrap - не разрешено използване-->
-<!--      <li><a href="index.html"><i class="bi bi-house-fill"></i> Начало</a></li>-->
-
-<!--inline svg - векторно изписване на необходимата икона-->
-      <li>
-        <a href="index.html">
-          <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 16 16" fill="currentColor">
-<!--            векторният път (контурите) на изображението-->
-            <path d="M8 0L0 6h2v10h4V10h4v6h4V6h2L8 0z"/>
-          </svg>
-          Начало
-        </a>
-      </li>
-
-      <li><a href="symbolism.html">Символика</a></li>
-      <li><a href="math.html">Математика</a></li>
-      <li><a href="daily.html">Числа в ежедневието</a></li>
-
-      <li class="dropdown">
-        <a href="javascript:void(0)" class="dropbtn">Нумерология</a>
-        <div class="dropdown-content">
-          <a href="name.html" >Анализ на име</a>
-          <a href="destiny.html">Анализ на дата на раждане</a>
-        </div>
-
-      <li class="dropdown">
-<!--        <a href="javascript:void(0)" class="dropbtn"><i class="bi bi-info-circle-fill"></i> За нас</a>-->
-        <a href="javascript:void(0)" class="dropbtn">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle-fill" viewBox="0 0 16 16">
-            <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2"/>
-          </svg>
-          За нас</a>
-
-        <div class="dropdown-content">
-          <a href="contact.html" >Контакти</a>
-        </div>
-    </ul>
-  </nav>
-  </div>
 </header>
