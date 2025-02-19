@@ -203,6 +203,7 @@ li.dropdown { /* главно меню - dropdown*/
   display: flex;
   align-items: center; /* центрира логото и текста вертикално */
   gap: 1vw; /* разстояние между логото и текста */
+  max-height: 80vh;
 }
 .-header-logo-container a {
   text-decoration: none; /* Премахва подчертаването */
@@ -258,6 +259,15 @@ li.dropdown { /* главно меню - dropdown*/
   height: auto;
 }
 
+.contact-container {
+  display: block;
+  /*margin-top: 20px;*/
+  width: 90%;
+  padding: 2vh 3vw;
+  max-width: 60%;
+  text-align: right;
+}
+
 .img-result {
   /*float: left;*/
   margin: 2vw 4.7vw;
@@ -298,6 +308,16 @@ li.dropdown { /* главно меню - dropdown*/
 
 .main-begin {
   margin-top: 30vh;
+}
+
+.main-contact {
+  margin-top: 10vh;
+  /*position: relative;*/
+}
+
+.form-container{
+  display: block;
+
 }
 
 .full-name {
@@ -445,15 +465,15 @@ footer {
   gap: 15px; /* разстояние между иконите */
 }
 
-.social-icons a svg {
+.social-icons a svg, .special-text {
   width: 30px;
   height: 30px;
   fill: #3d3e47; /* цветът на иконите */
   transition: transform 0.3s ease-in-out, fill 0.3s;
 }
 
-.social-icons a svg:hover {
-  transform: scale(1.2); /* увеличава иконата при ховър */
+.social-icons a svg:hover, .special-text {
+  transform: scale(1.5); /* увеличава иконата при ховър */
   fill: #FFD700; /* променя цвета на иконата на златист */
 }
 

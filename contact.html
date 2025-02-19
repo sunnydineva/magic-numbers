@@ -19,8 +19,10 @@
         loadScript("js/head-content.js");
         loadScript("js/navbar.js");
         loadScript("js/footer.js");
+        loadScript("js/google.js");
     </script>
-    <div id="head-container"></div>
+    <div id="head-container"></div><!--    <link rel="stylesheet" href="css/contact-us.css">-->
+
 </head>
 <body>
 <header>
@@ -28,31 +30,50 @@
 </header>
 
 <main class="main-begin">
-    <div class="container-element-60">
-        <h2>Изпратете ни съобщение</h2>
-        <div class="contact-form">
-            <form>
-                <div>
-                    <label for="name">Име:</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div>
-                    <label for="email">Имейл:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div>
-                    <label for="message">Съобщение:</label>
-                    <textarea id="message" name="message" rows="4" required></textarea>
+    <div class="image-text-container">
+
+        <div class="contact-container">
+            <!--        <div class="container-element-60">-->
+            <div>
+                <form method="POST" id="contactForm">
+                    <div>
+                        <label for="name">Име:</label>
+                        <input type="text" id="name" name="name" required
+                                oninvalid="this.setCustomValidity('Моля, въведете вашето име!')"
+                                oninput="this.setCustomValidity('')"
+                                placeholder="Вашето име">
+
+                    </div>
+                    <div>
+                        <label for="email">е-mail:</label>
+                        <input type="email" id="email" name="email" required
+                               oninvalid="this.setCustomValidity('Моля, въведете e-mail-а or!')"
+                               oninput="this.setCustomValidity('')"
+                               placeholder="Вашата електронна поща">
+                    </div>
+                    <div>
+                        <label for="message">Съобщение:</label>
+                        <textarea id="message" name="message" required
+                                oninvalid="this.setCustomValidity('Моля, попълнете съобщение!')"
+                                oninput="this.setCustomValidity('')"
+                                placeholder="Текст на съобщението">
+                        </textarea>
+                    </div>
                     <div>
                         <button type="submit">Изпрати</button>
                     </div>
-                </div>
-            </form>
+                </form>
+            </div>
         </div>
+
+        <div id="map"></div>
+
     </div>
 </main>
+<!--// Зареждаме Google Maps API-->
+</body>
 <footer>
     <div id="footer-container"></div>
 </footer>
-</body>
+
 </html>
