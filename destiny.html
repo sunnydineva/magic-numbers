@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <script>
+    // откриваме правилния baseURL за локален сървър или GitHub Pages
+    let baseURL = window.location.hostname === "sunnydineva.github.io"
+      ? "https://sunnydineva.github.io/magic-numbers/"
+      : "/";
+    document.write(`<script src="${baseURL}js/config.js"><\/script>`)
+  </script>
+
+  <!--  скриптове, зареждащи head-съдържанието със стилове и т.н, навигационния бар-->
+  <script>
+    loadScript("js/head-content.js");
+    loadScript("js/navbar.js");
+    loadScript("js/footer.js");
+    loadScript("js/calculations/calculationsNumerology.js");
+  </script>
+  <div id="head-container"></div>
+</head>
+<body>
+<header>
+  <div id="navbar-container"></div>
+</header>
+<main class="main-begin">
+  <h2>Нумерологичен анализ на датата на раждане</h2>
+  <section>
+    <div class="image-text-container">
+      <img alt="" class="container-element-40" src="img/numbers_640_sq_sq_640.jpg"/>
+      <p>
+        <strong>Дата на раждане</strong> не е просто числов израз – тя съдържа
+        <strong>скрит код</strong>, който разкрива <strong>житейския ни път</strong>, <strong>съдбата</strong> и
+        <strong>предизвикателствата</strong>, които срещаме.
+        Чрез изчисляване на <strong>Числото на Съдбата (Life Path Number)</strong> можем да разберем какви са нашите
+        <strong>силни и слаби страни</strong>, както и каква <strong>енергия</strong> носим през целия си живот. За да
+        изчислим
+        <strong>Числото на Съдбата</strong>, събираме всички цифри от <strong>датата на раждане</strong>, докато не
+        получим
+        <strong>едноцифрено число</strong> (с изключение на майсторските числа <strong>11, 22, 33</strong>). Това число
+        разкрива
+        <strong>основната вибрация на живота ни</strong> – каква енергия носим и какви уроци ще срещнем по пътя си. То
+        отразява
+        нашите вътрешни заложби, качества и препятствия, които трябва да преодолеем, за да постигнем хармония. Числото
+        на Съдбата
+        също така дава представа за <strong>кариерата, взаимоотношенията и личностното развитие</strong>. Например,
+        някои числа
+        показват <strong>силно изразени лидерски умения</strong>, докато други са свързани с <strong>духовност, изкуство
+        или бизнес</strong>.
+        Познаването на това число помага да се ориентираме в живота и да вземаме по-осъзнати решения. <strong>Как да
+        използваме
+        Числото на Съдбата?</strong> В сферата на <strong>саморазвитието</strong>, разбирането на енергията на числото
+        ни позволява
+        да работим върху своите силни и слаби страни. При <strong>избора на кариера</strong> числото показва в кои
+        области ще сме
+        най-успешни и удовлетворени. В <strong>взаимоотношенията</strong> разбирането на числата на близките ни хора
+        помага за
+        по-добра комуникация и хармония. <strong>Числото на Съдбата е като карта на живота – то не определя всичко, но
+        ни дава
+        насоки как да разгърнем пълния си потенциал.</strong> Открийте своята вибрация и използвайте нейната сила, за да
+        вървите напред с увереност!
+        <br>
+        <br>
+        <strong>Пример:</strong>
+        <br>
+        <strong>Дата на раждане:</strong> 12.07.1995 <br>
+        <strong>Изчисление:</strong> 1 + 2 + 0 + 7 + 1 + 9 + 9 + 5 = <strong>34</strong> → 3 + 4 = <strong>7</strong>
+        <br>
+        <br>
+        ✅ <strong>Числото на Съдбата е 7.</strong>
+      </p>
+    </div>
+
+    <!--    <div class="italic">Въведете своето име за да разберете!-->
+    <!--    <form id="numerologyForm">-->
+    <!--      <div>-->
+    <!--        <label for="name">Име:</label>-->
+    <!--        <input id="name" onclick="clearResultDescription()" required type="text">-->
+    <!--      </div>-->
+    <!--      <button onclick="calculateNameNumber()" type="button">Изчисли Число на името</button>-->
+    <!--    </form>-->
+    <!--    </div>-->
+  </section>
+
+  <section>
+    <!--    резултати от изчисленията - да не се прекръстват id-тата!-->
+    <br><br>
+    <div class="image-text-container">
+
+      <form id="numerologyForm">
+        <label for="birthdate">Дата на раждане:</label>
+        <input id="birthdate" onclick="clearResultDescription()" required type="date">
+        <button onclick="calculateDestinyNumber()" type="button">Изчисли Число на съдбата</button>
+      </form>
+    </div>
+    <div class="numerology-result-container">
+      <!--  <div class="float-left" id="result"></div>-->
+      <div id="result"></div>
+      <div id="description"></div>
+      <div id="result-img"></div>
+    </div>
+    <div class="image-text-container">
+      <table>
+        <tr>
+          <th>Число</th>
+          <th>Значение</th>
+        </tr>
+        <tr><td>1</td><td>Самоувереност и успех</td></tr>
+        <tr><td>2</td><td>Сътрудничество и чувствителност</td></tr>
+        <tr><td>3</td><td>Оптимизъм и комуникация</td></tr>
+        <tr><td>4</td><td>Трудолюбие и устойчивост</td></tr>
+        <tr><td>5</td><td>Приспособимост и промяна</td></tr>
+        <tr><td>6</td><td>Хармония и семейство</td></tr>
+        <tr><td>7</td><td>Интуиция и вътрешно познание</td></tr>
+        <tr><td>8</td><td>Сила и постижения</td></tr>
+        <tr><td>9</td><td>Служене и завършеност</td></tr>
+      </table>
+    </div>>
+  </section>
+</main>
+</body>
+<footer>
+  <div id="footer-container"></div>
+</footer>
+</html>

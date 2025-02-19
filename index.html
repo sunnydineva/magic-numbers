@@ -6,18 +6,37 @@
   <title>Тайнственият свят на числата</title>
 
   <meta charset="UTF-8">
+
+  <!--  скрипт, адаптиращ сайта да работи от github или от localhost-->
+  <!--  <script>-->
+  <!--    let baseURL = window.location.hostname === "sunnydineva.github.io"-->
+  <!--      ? "https://sunnydineva.github.io/magic-numbers/"-->
+  <!--      : "/";-->
+
+  <!--    document.write(`<script src="${baseURL}js/head-content.js"><\/script>`);-->
+  <!--    document.write(`<script src="${baseURL}js/navbar.js"><\/script>`);-->
+  <!--    document.write(`<script src="${baseURL}js/footer.js"><\/script>`);-->
+  <!--  </script>-->
+
+
   <script>
+    // откриваме правилния baseURL за локален сървър или GitHub Pages
     let baseURL = window.location.hostname === "sunnydineva.github.io"
       ? "https://sunnydineva.github.io/magic-numbers/"
       : "/";
-
-    document.write(`<script src="${baseURL}js/head-content.js"><\/script>`);
-    document.write(`<script src="${baseURL}js/navbar.js"><\/script>`);
+    document.write(`<script src="${baseURL}js/config.js"><\/script>`)
   </script>
 
   <!--  скриптове, зареждащи head-съдържанието със стилове и т.н, навигационния бар-->
-<!--  <script src="js/head-content.js"></script>-->
-<!--  <script src="js/navbar.js"></script>-->
+  <script>
+    loadScript("js/head-content.js");
+    loadScript("js/navbar.js");
+    loadScript("js/footer.js");
+  </script>
+  <!--  работи само от localhost-->
+  <!--  <script src="js/head-content.js"></script>-->
+  <!--  <script src="js/navbar.js"></script>-->
+
   <div id="head-container"></div>
 </head>
 <body>
@@ -55,17 +74,15 @@
       </div>
     </div>
   </section>
- <section>
+  <section>
     <div>
       <h2>Какво ще откриете тук?</h2>
     </div>
     <div class="image-text-container">
       <div>
-<!--        <img alt="" class="container-element-40" src="img/image_with_numbers.jpg"/>-->
-        <img alt="" class="container-element-40" src="img/image_with_numbers.jpg"/>
+        <img src="img/numbers_320_sq.jpg" alt=""/>
       </div>
-<!--      <div class="container-element-90">-->
-      <div >
+      <div>
         <ul>
           <li>Числата и тяхната символика в различни култури.</li>
           <li>Числата в математиката – от прости числа до златното сечение.</li>
@@ -75,7 +92,10 @@
         </ul>
       </div>
     </div>
- </section>
+  </section>
 </main>
+<footer>
+  <div id="footer-container"></div>
+</footer>
 </body>
 </html>

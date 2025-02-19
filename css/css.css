@@ -1,45 +1,47 @@
 /* =================== МАСОВИ ЕЛЕМЕНТИ =======================*/
 
 body {
-  /*padding-top: 60px; !* Височината на навигацията + малко допълнително пространство *!*/
+  /*padding-top: 60px; !* височината на навигацията + малко допълнително пространство *!*/
   background-image: url("../img/background.png");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  background-color: #2c3e50; /* Резервен цвят, ако изображението не се зареди */
-  /*color: white; !* Цвят на текста за по-добър контраст *!*/
+  background-color: #2c3e50; /* резервен цвят, ако изображението не се зареди */
+  /*color: white; !* цвят на текста за по-добър контраст *!*/
   font-family: Arial, sans-serif;
 }
 
-/*header{*/
-/*  position: fixed;*/
-/*}*/
-
-/*nav {*/
-/*  !*position: fixed; !* Фиксира навигацията в горната част на екрана *!*!*/
-/*  !*top: 0;*!*/
-/*  !*left: 0;*!*/
-/*  width: 100%; !* Навигацията да обхваща цялата ширина *!*/
-/*  background-color: #333; !* Цветът на фона (можеш да го промениш) *!*/
-/*  z-index: 1000; !* Уверява се, че навигацията стои над всички елементи *!*/
-/*  padding: 10px 0;*/
-/*  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); !* Леко засенчване за по-добър изглед *!*/
-/*}*/
-
-p, li{
+p, li {
   font-size: 1.2rem; /* 16px */
   text-align: justify;
 }
 
-button, input, label {
-  font-size: 1rem; /* Размерът на шрифта следва глобалния размер */
-  padding: 10px 20px; /* Вътрешен отстъп за удобство */
-  min-width: 300px; /* Гарантира, че елементът няма да стане прекалено малък */
-  height: 35px; /* Фиксирана височина за еднакъв дизайн */
-  border-radius: 5px; /* Закръглени ъгли */
+li a {
+  display: flex;
+  align-items: center; /* подравнява иконата и текста вертикално */
+  gap: 5px; /* разстояние между иконата и текста */
+  color: white; /* бял текст и икона */
+  text-decoration: none;
+  font-size: 1.2em; /* автоматичен размер на SVG */
 }
 
-label{
+li a svg {
+  fill: currentColor; /* наследява цвета от текста */
+  width: 1em;
+  height: 1em;
+}
+
+
+button, input, label {
+  font-size: 1.3rem; /* размерът на шрифта следва глобалния размер */
+  padding: 10px 20px; /* вътрешен отстъп за удобство */
+  min-width: 300px; /* гарантира, че елементът няма да стане прекалено малък */
+  height: 35px; /* фиксирана височина за еднакъв дизайн */
+  border-radius: 5px; /* Закръглени ъгли */
+  margin-left: 1vw;
+}
+
+label {
   cursor: pointer;
 }
 
@@ -49,7 +51,6 @@ button {
   border: none;
   height: 50px;
   cursor: pointer;
-  /*border-radius: 5px; !* Закръглени ъгли *!*/
   transition: background 0.3s ease-in-out; /* Време за превключване на цветовете */
 }
 
@@ -77,8 +78,14 @@ h3 {
 }
 
 h4 {
-  font-size: 2vw;
+  font-size: 1vw;
   text-align: left;
+}
+
+h1:hover {
+  transform: scale(1.2); /* увеличава заглавието при ховър */
+  color: #3d3e47; /* променя цвета на текста на златист */
+  transition: transform 0.5s ease-in-out, color 0.3s ease-in-out;
 }
 
 /* =================== ГЛАВНО МЕНЮ =======================*/
@@ -126,14 +133,14 @@ nav li a { /* главно меню */
 }
 
 nav li a:hover:not(.active) {
-  background-color: #111;  /* активен dd - черно */
+  background-color: #111; /* активен dd - черно */
 }
 
 li a:hover, .dropdown:hover .dropbtn {
-  background-color:  #111;  /* активно меню - черно */
+  background-color: #111; /* активно меню - черно */
 }
 
-li.dropdown {  /* главно меню - dropdown*/
+li.dropdown { /* главно меню - dropdown*/
   display: inline-block;
 }
 
@@ -144,11 +151,11 @@ li.dropdown {  /* главно меню - dropdown*/
   /*min-width: 160px;*/
   min-width: 8.33vw;
   /*box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);*/
-  box-shadow: 0px 0.42vh 0.83vh 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 0.42vh 0.83vh 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
-.dropdown-content a {/* главно меню - съдържание на dropdown - елементи */
+.dropdown-content a { /* главно меню - съдържание на dropdown - елементи */
   color: black;
   /*padding: 12px 16px;*/
   padding: 1.11vh 0.83vw;
@@ -175,7 +182,7 @@ li.dropdown {  /* главно меню - dropdown*/
   font-style: oblique;
 }
 
-.float-left{
+.float-left {
   float: left;
 }
 
@@ -186,6 +193,39 @@ li.dropdown {  /* главно меню - dropdown*/
 /*  max-width: 90%; !* Гарантира, че изображението не надвишава родителския контейнер *!*/
 /*}*/
 
+.header-logo-container {
+  display: flex;
+  align-items: center; /* центрира логото и текста вертикално */
+  gap: 1vw; /* разстояние между логото и текста */
+}
+.-header-logo-container a {
+  text-decoration: none; /* Премахва подчертаването */
+}
+
+.-header-logo-container a:visited {
+  color: inherit; /* лилавия цвят на посетените линкове */
+}
+
+.logo {
+  width: auto;
+  height: 0.8em; /* като H1 */
+}
+
+.numerology-result-container {
+  display: block;
+  margin-bottom: 1.5vh;
+  margin-left: 4vh;
+  max-width: 80%;
+  text-align: center;
+  padding: 6vh 6vw; /* вътре в контейнера */
+  justify-content: center; /* вертикално подравняване в контейнера */
+}
+
+.numerology-result-container > * { /* децата му*/
+  display: block; /* всеки елемент да е на нов ред */
+  margin-bottom: 1.5vh; /* разстояние между елементите */
+}
+
 .image-text-container {
   display: flex; /* подравнява изображението и текста в една линия */
   justify-content: center; /* вертикално подравняване в контейнера */
@@ -194,8 +234,21 @@ li.dropdown {  /* главно меню - dropdown*/
   padding: 2vh 3vw; /* вътре в контейнера */
 }
 
-.container-element-40{
+.simple-container {
+  /*margin-top: 20px;*/
+  width: 90%;
+  padding: 2vh 3vw;
+  max-width: 95%;
+  text-align: justify;
+}
+
+.container-element-40 {
   max-width: 40%;
+  height: auto;
+}
+
+.container-element-20 {
+  max-width: 20%;
   height: auto;
 }
 
@@ -208,43 +261,95 @@ li.dropdown {  /* главно меню - dropdown*/
   border-radius: 10px; /* закръглени ъгли */
 }
 
-.text-left{
+.text-left {
   padding: 4vh 4vw;
 }
 
-.container-element-60{
+.container-element-60 {
   max-width: 60%;
 }
 
-.container-element-60{
+.container-element-60 {
   max-width: 60%;
 }
 
-.position-fixed{
-position: fixed;
+.position-fixed {
+  position: fixed;
 }
 
-.position-sticky{
+.position-sticky {
   position: sticky;
 }
 
-.header-sticky{
+.header-sticky {
   /*height: 60px;*/
   position: fixed;
   top: 0;
   width: 100%;
-  background-color:  #708896;
+  background-color: #708896;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.main-begin{
-  margin-top: 40vh;
-  /*overflow: hidden;*/
+.main-begin {
+  margin-top: 30vh;
 }
 
-/* =================== ТАБЛИЦА =======================*/
+.full-name {
+  min-width: 450px;
+}
 
-/* =================== КАРТИНИ =======================*/
+
+/* =================== ТАБЛИЦИ =======================*/
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th, td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: center;
+}
+th {
+  background-color: #535362;
+}
+
+tr:hover { /* при преминаване през реда - помътнява и се уголемява плавно*/
+  background-color: #00000026;
+  transform: scale(1.02);
+  transition: all 0.2s ease-in-out;
+}
+
+/* =================== FOOTER =======================*/
+footer {
+  /*background-color:  #708896;*/
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 1em;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px; /* разстояние между иконите */
+}
+
+.social-icons a svg {
+  width: 30px;
+  height: 30px;
+  fill: #3d3e47; /* цветът на иконите */
+  transition: transform 0.3s ease-in-out, fill 0.3s;
+}
+
+.social-icons a svg:hover {
+  transform: scale(1.2); /* увеличава иконата при ховър */
+  fill: #FFD700; /* променя цвета на иконата на златист */
+}
 
 /* =================== ДРУГИ =======================*/
 /*pseudo-element - стил при потребителски избор на текст(clicking, dragging the mouset)*/
@@ -272,7 +377,8 @@ position: fixed;
     font-size: 3vw; /* nо-голям основен текст за мобилни */
     /*font-size: 1rem; !* nо-голям основен текст за мобилни *!*/
   }
-  p, li{
+
+  p, li {
     font-size: 0.8rem; /* 32px */
   }
 
@@ -289,7 +395,7 @@ position: fixed;
   }
 
   h4 {
-    font-size: 4vw;
+    font-size: 1vw;
   }
 
   nav ul li a {
@@ -303,82 +409,84 @@ position: fixed;
     float: none; /* Премахване на float */
   }
 
-  .image-text-container{
+  .image-text-container {
     display: block;
-    width: 95%
-  ;
-
-  .container-element-40, .container-element-60{ /* за мобилни става центрирано */
-    max-width: 100%;
+    width: 95%;
   }
 
-  .input, label, button{
-  /*  по-големи за мобилен телефон*/
-  }
-}
-
-/* 📲 За таблети (481px - 1024px) */
-@media (max-width: 1024px) {
-  body {
-    font-size: 2.5vw; /* Оставяме текста удобен за четене */
+  .simple-container {
+    display: block;
+    width: 95%;
+    padding: 6vw 6vw;
+    max-width: 60%;
   }
 
-  h1 {
-    font-size: 6.5vw;
+  .container-element-40, .container-element-60 { /* за мобилни става центрирано */
+      max-width: 100%;
+    }
+
+    .input, label, button {
+      /*  по-големи за мобилен телефон*/
+    }
   }
 
-  nav ul li a {
-    font-size: 1.2rem;
-    padding: 12px 10px;
+  /* 📲 За таблети (481px - 1024px) */
+  @media (max-width: 1024px) {
+    body {
+      font-size: 2.5vw; /* Оставяме текста удобен за четене */
+    }
+
+    h1 {
+      font-size: 6.5vw;
+    }
+
+    nav ul li a {
+      font-size: 1.2rem;
+      padding: 12px 10px;
+    }
+
+    .img-result {
+      width: 80%;
+      margin: 2vh auto;
+    }
   }
 
-  .img-result {
-    width: 80%;
-    margin: 2vh auto;
+  /*!* 💻 За лаптопи и стандартни десктопи (1025px - 1600px) *!*/
+  /*@media (max-width: 1600px) {*/
+  /*  body {*/
+  /*    font-size: 1.2rem;*/
+  /*  }*/
+  /*  h1 {*/
+  /*    font-size: 4vw;*/
+  /*  }*/
+  /*  nav ul li a {*/
+  /*    font-size: 1rem;*/
+  /*    padding: 10px;*/
+  /*  }*/
+  /*  .img-result {*/
+  /*    width: 50%;*/
+  /*    margin: 2vh auto;*/
+  /*  }*/
+  /*}*/
+  /* 🖥️ За 4K монитори и телевизори (над 1600px) */
+  @media (min-width: 1601px) {
+    body {
+      font-size: 1.5rem;
+    }
+
+    h1 {
+      font-size: 3.5vw;
+    }
+
+    nav ul li a {
+      font-size: 1.2rem;
+      padding: 15px;
+    }
+
+    .img-result {
+      width: 40%;
+    }
   }
-}
-
-/*!* 💻 За лаптопи и стандартни десктопи (1025px - 1600px) *!*/
-/*@media (max-width: 1600px) {*/
-/*  body {*/
-/*    font-size: 1.2rem;*/
-/*  }*/
-
-/*  h1 {*/
-/*    font-size: 4vw;*/
-/*  }*/
-
-/*  nav ul li a {*/
-/*    font-size: 1rem;*/
-/*    padding: 10px;*/
-/*  }*/
-
-/*  .img-result {*/
-/*    width: 50%;*/
-/*    margin: 2vh auto;*/
-/*  }*/
-/*}*/
-
-/* 🖥️ За 4K монитори и телевизори (над 1600px) */
-@media (min-width: 1601px) {
-  body {
-    font-size: 1.5rem;
-  }
-
-  h1 {
-    font-size: 3.5vw;
-  }
-
-  nav ul li a {
-    font-size: 1.2rem;
-    padding: 15px;
-  }
-
-  .img-result {
-    width: 40%;
-  }
-}
-}
 
 
 

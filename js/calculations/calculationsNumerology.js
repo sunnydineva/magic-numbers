@@ -1,4 +1,7 @@
 function calculateNameNumber() {
+  if (!validateFullName()) {
+    return; // Спира изпълнението, ако името не е валидно
+  }
   let name = document.getElementById('name').value.toUpperCase();
 
   if (!name) {
@@ -11,7 +14,7 @@ function calculateNameNumber() {
     'А': 1, 'Б': 2, 'В': 3, 'Г': 4, 'Д': 5, 'Е': 6, 'Ж': 7, 'З': 8, 'И': 9,
     'Й': 1, 'К': 2, 'Л': 3, 'М': 4, 'Н': 5, 'О': 6, 'П': 7, 'Р': 8, 'С': 9,
     'Т': 1, 'У': 2, 'Ф': 3, 'Х': 4, 'Ц': 5, 'Ч': 6, 'Ш': 7, 'Щ': 8, 'Ъ': 9,
-    'Ь': 1, 'Ю': 2, 'Я': 3
+    'Ь': 1, 'Ю': 2, 'Я': 3, '-': 0
   };
 
   let nameNumber = name.split('').reduce((sum, letter) => {
@@ -88,6 +91,18 @@ function calculateNameNumber() {
   //   `;
   // }
 }
+
+function validateFullName() {
+  let fullName = document.getElementById('name').value.trim();
+
+  // поне два интервала (три имена)
+  if ((fullName.split(" ").length - 1) < 2) {
+    alert("Моля, въведете три имена.");
+    return false;
+  }
+  return true;
+}
+
 
 function calculateDestinyNumber() {
   let birthdate = document.getElementById('birthdate').value;

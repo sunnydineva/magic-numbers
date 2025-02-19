@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <title>Нумерологичен анализ на името</title>
+  <script>
+    // откриваме правилния baseURL за локален сървър или GitHub Pages
+    let baseURL = window.location.hostname === "sunnydineva.github.io"
+      ? "https://sunnydineva.github.io/magic-numbers/"
+      : "/";
+    document.write(`<script src="${baseURL}js/config.js"><\/script>`)
+  </script>
+
+  <!--  скриптове, зареждащи head-съдържанието със стилове и т.н, навигационния бар-->
+  <script>
+    loadScript("js/head-content.js");
+    loadScript("js/navbar.js");
+    loadScript("js/footer.js");
+    loadScript("js/calculations/calculationsNumerology.js");
+  </script>
+  <div id="head-container"></div>
+</head>
+<body>
+<header>
+  <div class="-header-logo-container">
+  </div>
+  <div id="navbar-container"></div>
+</header>
+<main class="main-begin">
+  <section>
+    <h2>Нумерологичен анализ на името</h2>
+    <div class="image-text-container">
+      <img alt="" class="container-element-40" src="img/numbers_640_sq.jpg"/>
+      <p> Тайната на личността - <strong>числото на името</strong> <br>
+        В нумерологията числото на името се откроява като една от най-важните
+        фигури. Извлича се от буквите в името на човек и разкрива отличителните черти, наклонности и енергичен
+        отпечатък, които индивидът предава на другите. Това число предлага задълбочено разбиране на вътрешния пейзаж на
+        човека, подчертавайки както неговите силни, така и слаби страни, заедно с влиянието, което упражняват върху
+        обкръжението си.
+        Как се извършва изчисляването на номера на името? В областта на нумерологията на всяка буква се приписва числова
+        стойност въз основа на системата на Питагор. Стойностите, получени от името, се сумират, докато се постигне
+        едноцифрено число, с изключение на главните числа — 11, 22 и 33 — които се третират отделно.
+        <br>
+        <strong>Например</strong> Вашето име е: Мария Иванова Стефанова.
+        <br>
+        Стъпка 1: Определяне на числата за всяка буква
+        Използваме Питагоровата система, където всяка буква съответства на числова стойност:
+        <br>
+        Мария → 4 + 1 + 9 + 9 + 1 = 24 → 2 + 4 = 6 <br>
+        Иванова → 9 + 3 + 1 + 6 + 6 + 4 + 1 = 30 → 3 + 0 = 3 <br>
+        Стефанова → 1 + 2 + 6 + 6 + 1 + 5 + 6 + 4 + 1 = 32 → 3 + 2 = 5 <br>
+        <br>
+        Стъпка 2: Сумиране на числата на отделните имена <br>
+        ✅ 6 + 3 + 5 = 14 → 1 + 4 = 5 <br> <br>
+        <strong> Числената стойност на Името е 5.</strong> <br>
+        ✨ Това означава, че личността е динамична, свободолюбива и адаптивна. Числото 5 носи енергията на промяната,
+        комуникацията и приключенията.<br>
+        ✨ Какво е значението на вашето Име Число?<br><br><br>
+        ✨ Въведете своето име за да разберете!<br>
+
+      </p>
+    </div>
+
+    <!--    <div class="italic">Въведете своето име за да разберете!-->
+    <!--    <form id="numerologyForm">-->
+    <!--      <div>-->
+    <!--        <label for="name">Име:</label>-->
+    <!--        <input id="name" onclick="clearResultDescription()" required type="text">-->
+    <!--      </div>-->
+    <!--      <button onclick="calculateNameNumber()" type="button">Изчисли Число на името</button>-->
+    <!--    </form>-->
+    <!--    </div>-->
+  </section>
+
+  <section>
+    <!--    резултати от изчисленията - да не се прекръстват id-тата!-->
+    <br><br>
+    <div class="image-text-container">
+      <form id="numerologyForm">
+        <label for="name">Въведете Вашите три имена:</label>
+        <input id="name" class="full-name" onclick="clearResultDescription()" required type="text">
+        <button onclick="calculateNameNumber()" type="button">Изчисли Число на името</button>
+      </form>
+    </div>
+    <div class="numerology-result-container">
+      <!--  <div class="float-left" id="result"></div>-->
+      <div id="result"></div>
+      <div id="description"></div>
+      <div id="result-img"></div>
+    </div>
+    <div class="image-text-container">
+      <table>
+        <tr>
+          <th>Число на името</th>
+          <th>Значение</th>
+        </tr>
+        <tr><td>1</td><td>Лидерство и независимост</td></tr>
+        <tr><td>2</td><td>Дипломатичност и баланс</td></tr>
+        <tr><td>3</td><td>Креативност и изразителност</td></tr>
+        <tr><td>4</td><td>Стабилност и практичност</td></tr>
+        <tr><td>5</td><td>Свобода и приключение</td></tr>
+        <tr><td>6</td><td>Отговорност и грижа</td></tr>
+        <tr><td>7</td><td>Духовност и мъдрост</td></tr>
+        <tr><td>8</td><td>Амбиция и материален успех</td></tr>
+        <tr><td>9</td><td>Хуманност и завършеност</td></tr>
+      </table>
+    </div>
+  </section>
+</main>
+</body>
+<footer>
+  <div id="footer-container"></div>
+</footer>
+</html>

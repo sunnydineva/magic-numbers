@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Тайнственият свят на числата</title>
+
+  <meta charset="UTF-8">
+
+  <!--  скрипт, адаптиращ сайта да работи от github или от localhost-->
+  <!--  <script>-->
+  <!--    let baseURL = window.location.hostname === "sunnydineva.github.io"-->
+  <!--      ? "https://sunnydineva.github.io/magic-numbers/"-->
+  <!--      : "/";-->
+
+  <!--    document.write(`<script src="${baseURL}js/head-content.js"><\/script>`);-->
+  <!--    document.write(`<script src="${baseURL}js/navbar.js"><\/script>`);-->
+  <!--    document.write(`<script src="${baseURL}js/footer.js"><\/script>`);-->
+  <!--  </script>-->
+
+
+  <script>
+    // откриваме правилния baseURL за локален сървър или GitHub Pages
+    let baseURL = window.location.hostname === "sunnydineva.github.io"
+      ? "https://sunnydineva.github.io/magic-numbers/"
+      : "/";
+    document.write(`<script src="${baseURL}js/config.js"><\/script>`)
+  </script>
+
+  <!--  скриптове, зареждащи head-съдържанието със стилове и т.н, навигационния бар-->
+  <script>
+    loadScript("js/head-content.js");
+    loadScript("js/navbar.js");
+    loadScript("js/footer.js");
+  </script>
+  <!--  работи само от localhost-->
+  <!--  <script src="js/head-content.js"></script>-->
+  <!--  <script src="js/navbar.js"></script>-->
+
+  <div id="head-container"></div>
+</head>
+<body>
+<header>
+  <div id="navbar-container"></div>
+</header>
+
+<main class="main-begin">
+  <div class="simple-container">
+    <h2>Числата и тяхната символика в различни култури</h2>
+    <div class="image-text-container">
+      <img alt="" class="container-element-40" src="img/galery/blue.jpg"/>
+      <img alt="" class="container-element-40" src="img/galery/blue2.jpg"/>
+    </div>
+    <p>
+      Числата винаги са били нещо повече от обикновени знаци за количествено измерване. В продължение на хилядолетия те
+      са имали
+      <strong>дълбока символика</strong>, която варира в различните култури, религии и философски учения. Те са били
+      използвани за
+      <strong>предсказания, ритуали, магически практики и духовни интерпретации</strong>. Някои числа се считат за
+      носители на
+      <strong>щастие и късмет</strong>, докато други имат <strong>негативна</strong> или дори <strong>зловеща
+      репутация</strong>.
+      <strong>Числата в древните цивилизации:</strong> Древните египтяни придавали <strong>огромно значение</strong> на
+      числата, особено когато ставало въпрос за
+      <strong>божественото и отвъдното</strong>. Те вярвали, че определени числа съдържат <strong>скрити сили</strong>,
+      които влияят на
+      <strong>баланса във Вселената</strong>. Например:
+    <ul>
+      <li><strong>3</strong> – Представлява триадата на боговете (Ра, Озирис и Хор).</li>
+      <li><strong>4</strong> – Свързано с елементите на света – земя, въздух, огън и вода.</li>
+      <li><strong>7</strong> – Числото на съвършенството, използвано в религиозните ритуали.</li>
+    </ul>
+    <strong>Числата в китайската култура:</strong> В китайската традиция някои числа носят <strong>късмет</strong>,
+    докато други са свързани с <strong>нещастие</strong>.
+    Китайците вярват, че <strong>фонетичното звучене на числата</strong> е това, което определя тяхната символика.
+  <ul>
+    <li><strong>8</strong> – Най-щастливото число, защото звучи като думата за "богатство".</li>
+    <li><strong>4</strong> – Избягвано число, тъй като звучи като думата за "смърт".</li>
+    <li><strong>9</strong> – Свързано с дълголетие и вечност.</li>
+  </ul>
+
+    <strong>Числата в християнството:</strong> Християнската традиция съдържа множество препратки към <strong>свещени
+    числа</strong>:
+  <ul>
+    <li><strong>3</strong> – Символизира Светата Троица (Отец, Син и Свети Дух).</li>
+    <li><strong>7</strong> – Числото на съвършенството (седемте дни на сътворението, седемте печата в Откровението).
+    </li>
+    <li><strong>12</strong> – Представлява завършеност (12 апостоли, 12 племена на Израил).</li>
+    <li><strong>666</strong> – Наричано "числото на звяра", свързано с Антихриста.</li>
+  </ul>
+  </div>
+
+  <div class="simple-container ">
+  <table>
+    <tr>
+      <th>Цифра</th>
+      <th>Двоична система</th>
+      <th>Римски цифри</th>
+      <th>Символично значение</th>
+    </tr>
+    <tr><td>0</td><td>0000</td><td>-</td><td>Пустота, безкрайност</td></tr>
+    <tr><td>1</td><td>0001</td><td>I</td><td>Единство, начало</td></tr>
+    <tr><td>2</td><td>0010</td><td>II</td><td>Двойственост, баланс</td></tr>
+    <tr><td>3</td><td>0011</td><td>III</td><td>Хармония, творчество</td></tr>
+    <tr><td>4</td><td>0100</td><td>IV</td><td>Стабилност, основа</td></tr>
+    <tr><td>5</td><td>0101</td><td>V</td><td>Промяна, приключение</td></tr>
+    <tr><td>6</td><td>0110</td><td>VI</td><td>Семейство, отговорност</td></tr>
+    <tr><td>7</td><td>0111</td><td>VII</td><td>Духовност, мъдрост</td></tr>
+    <tr><td>8</td><td>1000</td><td>VIII</td><td>Безкрайност, сила</td></tr>
+    <tr><td>9</td><td>1001</td><td>IX</td><td>Завършеност, мъдрост</td></tr>
+  </table>
+  </div>
+
+</main>
+<footer>
+  <div id="footer-container"></div>
+</footer>
+</body>
+</html>
