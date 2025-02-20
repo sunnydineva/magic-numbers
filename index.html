@@ -1,102 +1,120 @@
 <!DOCTYPE html>
 <html lang="bg">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Тайнственият свят на числата</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тайнственият свят на числата</title>
 
-  <meta charset="UTF-8">
-  <link href="css/css.css" rel="stylesheet" type="text/css"/>
+    <meta charset="UTF-8">
+    <link href="css/css.css" rel="stylesheet" type="text/css"/>
+    <link href="css/mobile.css" rel="stylesheet" type="text/css"/>
+    <link href="css/tablet.css" rel="stylesheet" type="text/css"/>
 
-<!--    скрипт, адаптиращ сайта да работи от github или от localhost-->
+    <!--    скрипт, адаптиращ сайта да работи от github или от localhost-->
     <script>
-      let baseURL = window.location.hostname === "sunnydineva.github.io"
-        ? "https://sunnydineva.github.io/magic-numbers/"
-        : "/";
-      document.write(`<script src="${baseURL}js/config.js"><\/script>`);
+        let baseURL = window.location.hostname === "sunnydineva.github.io"
+            ? "https://sunnydineva.github.io/magic-numbers/"
+            : "/";
+        document.write(`<script src="${baseURL}js/config.js"><\/script>`);
     </script>
-  <!--  скриптове, зареждащи head-съдържанието със стилове и т.н, навигационния бар-->
-  <script>
-    loadScript("js/head-content.js");
-    loadScript("js/navbar.js");
-    loadScript("js/footer.js");
-    // loadScript("js/navButtonListener.js");
-  </script>
-  <!--  работи само от localhost-->
-  <!--  <script src="js/head-content.js"></script>-->
-  <!--  <script src="js/navbar.js"></script>-->
+    <!--  скриптове, зареждащи head-съдържанието със стилове и т.н, навигационния бар-->
+    <script>
+        loadScript("js/head-content.js");
+        loadScript("js/navbar.js");
+        loadScript("js/footer.js");
+        // loadScript("js/navButtonListener.js");
+    </script>
+    <!--  работи само от localhost-->
+    <!--  <script src="js/head-content.js"></script>-->
+    <!--  <script src="js/navbar.js"></script>-->
 
-  <div id="head-container"></div>
+    <div id="head-container"></div>
 </head>
 <body>
 <header>
-  <div id="navbar-container"></div>
+    <div id="navbar-container"></div>
 </header>
 <main class="main-begin">
 
-<!--  <div class="mobile-menu">-->
-<!--    <button class="menu-toggle">☰</button>-->
-<!--    <ul class="mobile-nav">-->
-<!--      <li><a href="index.html">Начало</a></li>-->
-<!--      <li><a href="symbolism.html">Символика</a></li>-->
-<!--      <li><a href="math.html">Математика</a></li>-->
-<!--      <li><a href="daily.html">Числа в ежедневието</a></li>-->
-<!--      <li><a href="name.html">Анализ на име<</a></li>-->
-<!--      <li><a href="destiny.html">Анализ на дата на раждане</a></li>-->
-<!--      <li><a href="contact.html">Контакт</a></li>-->
-<!--    </ul>-->
-<!--  </div>-->
-  <section>
+    <!--  <div class="mobile-menu">-->
+    <!--    <button class="menu-toggle">☰</button>-->
+    <!--    <ul class="mobile-nav">-->
+    <!--      <li><a href="index.html">Начало</a></li>-->
+    <!--      <li><a href="symbolism.html">Символика</a></li>-->
+    <!--      <li><a href="math.html">Математика</a></li>-->
+    <!--      <li><a href="daily.html">Числа в ежедневието</a></li>-->
+    <!--      <li><a href="name.html">Анализ на име<</a></li>-->
+    <!--      <li><a href="destiny.html">Анализ на дата на раждане</a></li>-->
+    <!--      <li><a href="contact.html">Контакт</a></li>-->
+    <!--    </ul>-->
+    <!--  </div>-->
     <h2>Добре дошли в света на числата!</h2>
     <div class="image-text-container" id="numbers">
-      <img alt="" class="container-element-40" src="img/numbers-4014181_640.jpg"/>
-      <div class="container-element-60">
-        <p>Числата – езикът на Вселената!</p>
-        <p>В различните култури числата имат дълбоко символично значение. Те могат да представляват хармония, баланс,
-          късмет или предизвикателства.
-          Използваме ги всеки ден – гледайки часовника сутрин, измервайки на разстояния. Но те са много повече от просто
-          инструмент за изчисления.
-          Независимо дали вярваме, че числата имат специално значение или просто ги приемаме като част от ежедневието,
-          едно е сигурно – без тях светът би бил съвсем различен. </p>
+        <div class="image-left-640">
+            <img alt="" src="img/numbers-4014181_640.jpg"/>
+        </div>
+        <div>
+            <p>
+                Числата – езикът на Вселената!
+                <br>
+                <br>
+                В различните култури числата имат дълбоко символично значение. Те могат да представляват хармония,
+                баланс,
+                късмет или предизвикателства.
+                Използваме ги всеки ден – гледайки часовника сутрин, измервайки на разстояния. Но те са много повече от
+                просто
+                инструмент за изчисления.
+                Независимо дали вярваме, че числата имат специално значение или просто ги приемаме като част от
+                ежедневието,
+                едно е сигурно – без тях светът би бил съвсем различен.
+            </p>
+        </div>
+    </div>
+
+    <div class="main-container">
         <p>
-          Още от древността хората са вярвали, че числата носят скрит смисъл и могат да разкрият тайните на света около
-          нас.
-          В различните култури числата имат дълбока символика. В Китай например 8 се смята за числото на късмета, докато
-          в западните страни 13 често се свързва със суеверия и лоши поличби. В математиката пък има специални числа
-          като числата на Фибоначи или златното сечение, които се появяват навсякъде в природата – от подредбата на
-          листата на растенията до формата на галактиките.
-          Числата, които използваме днес (арабските цифри), всъщност идват от древна Индия. Там математиците са развили
-          концепцията за нулата, която по-късно се разпространява в Близкия изток и Европа. Древните египтяни и
-          вавилонците също са имали свои собствени системи за броене, които са използвали за строеж на храмове и
-          предсказване на астрономически явления.
-          С времето математиката става основа за всички науки – от физиката и инженерството до компютърните технологии и
-          икономиката. Днес числата са навсякъде около нас, а благодарение на тях светът ни става все по-разбираем.
-        </p>
-      </div>
-    </div>
-  </section>
-  <section>
-    <div>
-      <h2>Какво ще откриете тук?</h2>
-    </div>
-    <div class="image-text-container">
-      <div class="center">
-        <img src="img/numbers_320_sq.jpg" alt=""/>
-      </div>
-      <div>
-        <ul>
-          <li>Числата и тяхната символика в различни култури.</li>
-          <li>Числата в математиката – от прости числа до златното сечение.</li>
-          <li>Нумерология или как числата влияят върху нашия живот?</li>
-          <li>Скритият код в нашето име.</li>
-          <li>Рожденната ни дата и нейната вибрация.</li>
-        </ul>
-      </div>
-    </div>
-  </section>
+            Още от древността хората са вярвали, че числата носят скрит смисъл и могат да разкрият тайните на света
+            около
+            нас.
+            В различните култури числата имат дълбока символика. В Китай например 8 се смята за числото на късмета,
+            докато
+            в западните страни 13 често се свързва със суеверия и лоши поличби. В математиката пък има специални числа
+            като числата на Фибоначи или златното сечение, които се появяват навсякъде в природата – от подредбата на
+            листата на растенията до формата на галактиките.
+            Числата, които използваме днес (арабските цифри), всъщност идват от древна Индия. Там математиците са
+            развили
+            концепцията за нулата, която по-късно се разпространява в Близкия изток и Европа. Древните египтяни и
+            вавилонците също са имали свои собствени системи за броене, които са използвали за строеж на храмове и
+            предсказване на астрономически явления.
+            С времето математиката става основа за всички науки – от физиката и инженерството до компютърните технологии
+            и
+            икономиката. Днес числата са навсякъде около нас, а благодарение на тях светът ни става все по-разбираем.
+        </p></div>
+
+    <section>
+        <div>
+            <h2>Какво ще откриете тук?</h2>
+        </div>
+        <div class="image-text-container">
+            <div class="image-left-320">
+                <img src="img/numbers_320_sq.jpg" alt=""/>
+            </div>
+
+            <div class="ul-right-no-flow">
+                <ul>
+                    <li>Числата и тяхната символика в различни култури.</li>
+                    <li>Числата в математиката – от прости числа до златното сечение.</li>
+                    <li>Нумерология или как числата влияят върху нашия живот?</li>
+                    <li>Скритият код в нашето име.</li>
+                    <li>Рожденната ни дата и нейната вибрация.</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
 </main>
 <footer>
-  <div id="footer-container"></div>
+    <div id="footer-container"></div>
 </footer>
 </body>
 </html>

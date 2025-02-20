@@ -1,103 +1,119 @@
 <!DOCTYPE html>
 <html lang="bg">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Тайнственият свят на числата</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тайнственият свят на числата</title>
 
-  <meta charset="UTF-8">
+    <meta charset="UTF-8">
 
-  <!--  скрипт, адаптиращ сайта да работи от github или от localhost-->
-  <!--  <script>-->
-  <!--    let baseURL = window.location.hostname === "sunnydineva.github.io"-->
-  <!--      ? "https://sunnydineva.github.io/magic-numbers/"-->
-  <!--      : "/";-->
+    <!--  скрипт, адаптиращ сайта да работи от github или от localhost-->
+    <!--  <script>-->
+    <!--    let baseURL = window.location.hostname === "sunnydineva.github.io"-->
+    <!--      ? "https://sunnydineva.github.io/magic-numbers/"-->
+    <!--      : "/";-->
 
-  <!--    document.write(`<script src="${baseURL}js/head-content.js"><\/script>`);-->
-  <!--    document.write(`<script src="${baseURL}js/navbar.js"><\/script>`);-->
-  <!--    document.write(`<script src="${baseURL}js/footer.js"><\/script>`);-->
-  <!--  </script>-->
+    <!--    document.write(`<script src="${baseURL}js/head-content.js"><\/script>`);-->
+    <!--    document.write(`<script src="${baseURL}js/navbar.js"><\/script>`);-->
+    <!--    document.write(`<script src="${baseURL}js/footer.js"><\/script>`);-->
+    <!--  </script>-->
 
 
-  <script>
-    // откриваме правилния baseURL за локален сървър или GitHub Pages
-    let baseURL = window.location.hostname === "sunnydineva.github.io"
-      ? "https://sunnydineva.github.io/magic-numbers/"
-      : "/";
-    document.write(`<script src="${baseURL}js/config.js"><\/script>`)
-  </script>
+    <script>
+        // откриваме правилния baseURL за локален сървър или GitHub Pages
+        let baseURL = window.location.hostname === "sunnydineva.github.io"
+            ? "https://sunnydineva.github.io/magic-numbers/"
+            : "/";
+        document.write(`<script src="${baseURL}js/config.js"><\/script>`)
+    </script>
 
-  <!--  скриптове, зареждащи head-съдържанието със стилове и т.н, навигационния бар-->
-  <script>
-    loadScript("js/head-content.js");
-    loadScript("js/navbar.js");
-    loadScript("js/footer.js");
-    loadScript("js/slides.js");
-  </script>
+    <!--  скриптове, зареждащи head-съдържанието със стилове и т.н, навигационния бар-->
+    <script>
+        loadScript("js/head-content.js");
+        loadScript("js/navbar.js");
+        loadScript("js/footer.js");
+        loadScript("js/slides.js");
+    </script>
 
-  <div id="head-container"></div>
+    <div id="head-container"></div>
 </head>
 <body>
 <header>
-  <div id="navbar-container"></div>
+    <div id="navbar-container"></div>
 </header>
 
 <main class="main-begin">
+    <div class="main-container">
+        <h2>Числата в нашето ежедневие</h2>
+        <div class="slider-container">
+            <!--      <div class="slide-img">-->
+            <!--        <img src="img/1.jpg" alt="">-->
+            <!--      </div>-->
+            <!--      <div class="slide-img">-->
+            <!--        <img src="img/2.jpg" alt="">-->
+            <!--      </div>-->
+            <div class="slide-img">
+                <img src="img/3.jpg" alt="">
+            </div>
+            <div class="slide-img">
+                <img src="img/4.jpg" alt="">
+            </div>
+            <div class="slide-img">
+                <img src="img/5.jpg" alt="">
+            </div>
+            <div class="slide-img">
+                <img src="img/6.jpg" alt="">
+            </div>
+            <div class="slide-img">
+                <img src="img/7.jpg" alt="">
+            </div>
+            <div class="slide-img">
+                <img src="img/8.jpg" alt="">
+            </div>
+            <div class="slide-img">
+                <img src="img/9.jpg" alt="">
+            </div>
+            <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+            <button class="next" onclick="changeSlide(1)">&#10095;</button>
+        </div>
+        </div>
+        <div class="main-container">
+            <p>
+                <b>Числата</b> играят важна роля в нашето ежедневие, без дори да го осъзнаваме. Те са навсякъде около
+                нас –
+                в <b>часовниците</b>, <b>парите</b>, <b>телефонните номера</b> и дори в <b>природата</b>. <br><br>
+                <b>Всяка сутрин</b> започва с проверка на времето – числата на часовника диктуват нашия ритъм на живот.
+                Планираме деня си според <b>графици</b> и <b>календари</b>, които са основани на числови системи.
+                <br><br>
+                <b>Финансите</b> също са неразривно свързани с числата – от управлението на <b>личния бюджет</b> до
+                икономиката на цялата държава. Изчисленията помагат за <b>балансиране</b> на разходите и приходите,
+                както и
+                за <b>инвестиции</b> и <b>спестявания</b>. <br><br>
+                <b>Здравето</b> ни също е свързано с числата – <b>кръвното налягане</b>, <b>телесната температура</b>,
+                <b>броят
+                    на крачките</b>, които правим всеки ден – всичко се измерва в цифри. В <b>медицината</b> числата
+                помагат на
+                лекарите да диагностицират и лекуват заболявания. <br><br>
+                <b>Технологиите</b> и <b>комуникациите</b> също разчитат на числата. Всички устройства, които
+                използваме,
+                работят чрез <b>сложни математически алгоритми</b>, кодирани в <b>нули и единици</b>. <br><br>
+                Без числата, съвременният свят би бил <b>хаотичен</b> и <b>неорганизиран</b>. Те ни дават
+                <b>структура</b>,
+                помагат ни да <b>вземаме решения</b> и <b>подобряват</b> живота ни във всяка негова област.
+            </p>
 
-  <div class="simple-container">
-    <h2>Числата в нашето ежедневие</h2>
-    <div class="slider-container">
-<!--      <div class="slide-img">-->
-<!--        <img src="img/1.jpg" alt="">-->
-<!--      </div>-->
-<!--      <div class="slide-img">-->
-<!--        <img src="img/2.jpg" alt="">-->
-<!--      </div>-->
-      <div class="slide-img">
-        <img src="img/3.jpg" alt="">
-      </div>
-      <div class="slide-img">
-        <img src="img/4.jpg" alt="">
-      </div>
-      <div class="slide-img">
-        <img src="img/5.jpg" alt="">
-      </div>
-      <div class="slide-img">
-        <img src="img/6.jpg" alt="">
-      </div>
-      <div class="slide-img">
-        <img src="img/7.jpg" alt="">
-      </div>
-      <div class="slide-img">
-        <img src="img/8.jpg" alt="">
-      </div>
-      <div class="slide-img">
-        <img src="img/9.jpg" alt="">
-      </div>
-      <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
-      <button class="next" onclick="changeSlide(1)">&#10095;</button>
-    </div>
-  </div>
-  <div class="simple-container">
-    <div>
-      <b>Числата</b> играят важна роля в нашето ежедневие, без дори да го осъзнаваме. Те са навсякъде около нас – в <b>часовниците</b>, <b>парите</b>, <b>телефонните номера</b> и дори в <b>природата</b>. <br><br>
-      <b>Всяка сутрин</b> започва с проверка на времето – числата на часовника диктуват нашия ритъм на живот. Планираме деня си според <b>графици</b> и <b>календари</b>, които са основани на числови системи. <br><br>
-      <b>Финансите</b> също са неразривно свързани с числата – от управлението на <b>личния бюджет</b> до икономиката на цялата държава. Изчисленията помагат за <b>балансиране</b> на разходите и приходите, както и за <b>инвестиции</b> и <b>спестявания</b>. <br><br>
-      <b>Здравето</b> ни също е свързано с числата – <b>кръвното налягане</b>, <b>телесната температура</b>, <b>броят на крачките</b>, които правим всеки ден – всичко се измерва в цифри. В <b>медицината</b> числата помагат на лекарите да диагностицират и лекуват заболявания. <br><br>
-      <b>Технологиите</b> и <b>комуникациите</b> също разчитат на числата. Всички устройства, които използваме, работят чрез <b>сложни математически алгоритми</b>, кодирани в <b>нули и единици</b>. <br><br>
-      Без числата, съвременният свят би бил <b>хаотичен</b> и <b>неорганизиран</b>. Те ни дават <b>структура</b>, помагат ни да <b>вземаме решения</b> и <b>подобряват</b> живота ни във всяка негова област.
-    </div>
-  </div>
-  <div class="simple-container">
 
-    <div class="image-text-container">
-      <img alt="" class="container-element-40" src="img/numbers-4014181_640.jpg"/>
-      <img alt="" class="container-element-40" src="img/numbers_640_sq_oval.jpg"/>
+        <div class="image-2-container">
+            <img alt="" class="container-element-40" src="img/numbers-4014181_640.jpg"/>
+            <img alt="" class="container-element-40" src="img/numbers_640_sq_oval.jpg"/>
+        </div>
+        </div>
+
+
     </div>
-  </div>
 </main>
 <footer>
-  <div id="footer-container"></div>
+    <div id="footer-container"></div>
 </footer>
 </body>
 </html>

@@ -1,141 +1,152 @@
 <!DOCTYPE html>
 <html lang="bg">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Тайнственият свят на числата</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тайнственият свят на числата</title>
 
-  <meta charset="UTF-8">
+    <meta charset="UTF-8">
 
-  <!--  скрипт, адаптиращ сайта да работи от github или от localhost-->
-  <!--  <script>-->
-  <!--    let baseURL = window.location.hostname === "sunnydineva.github.io"-->
-  <!--      ? "https://sunnydineva.github.io/magic-numbers/"-->
-  <!--      : "/";-->
+    <!--  скрипт, адаптиращ сайта да работи от github или от localhost-->
+    <!--  <script>-->
+    <!--    let baseURL = window.location.hostname === "sunnydineva.github.io"-->
+    <!--      ? "https://sunnydineva.github.io/magic-numbers/"-->
+    <!--      : "/";-->
 
-  <!--    document.write(`<script src="${baseURL}js/head-content.js"><\/script>`);-->
-  <!--    document.write(`<script src="${baseURL}js/navbar.js"><\/script>`);-->
-  <!--    document.write(`<script src="${baseURL}js/footer.js"><\/script>`);-->
-  <!--  </script>-->
+    <!--    document.write(`<script src="${baseURL}js/head-content.js"><\/script>`);-->
+    <!--    document.write(`<script src="${baseURL}js/navbar.js"><\/script>`);-->
+    <!--    document.write(`<script src="${baseURL}js/footer.js"><\/script>`);-->
+    <!--  </script>-->
 
 
-  <script>
-    // откриваме правилния baseURL за локален сървър или GitHub Pages
-    let baseURL = window.location.hostname === "sunnydineva.github.io"
-      ? "https://sunnydineva.github.io/magic-numbers/"
-      : "/";
-    document.write(`<script src="${baseURL}js/config.js"><\/script>`)
-  </script>
+    <script>
+        // откриваме правилния baseURL за локален сървър или GitHub Pages
+        let baseURL = window.location.hostname === "sunnydineva.github.io"
+            ? "https://sunnydineva.github.io/magic-numbers/"
+            : "/";
+        document.write(`<script src="${baseURL}js/config.js"><\/script>`)
+    </script>
 
-  <!--  скриптове, зареждащи head-съдържанието със стилове и т.н, навигационния бар-->
-  <script>
-    loadScript("js/head-content.js");
-    loadScript("js/navbar.js");
-    loadScript("js/footer.js");
-    loadScript("js/slides.js");
-  </script>
+    <!--  скриптове, зареждащи head-съдържанието със стилове и т.н, навигационния бар-->
+    <script>
+        loadScript("js/head-content.js");
+        loadScript("js/navbar.js");
+        loadScript("js/footer.js");
+        loadScript("js/slides.js");
+    </script>
 
-  <div id="head-container"></div>
+    <div id="head-container"></div>
 </head>
 <body>
 <header>
-  <div id="navbar-container"></div>
+    <div id="navbar-container"></div>
 </header>
+<main>
+<!--<main class="main-begin">-->
+    <h2>Числата и тяхната символика в различни култури</h2>
+    <div >
+<!--    <div class="main-container">-->
+        <div >
+            <div class="slider-container">
+                <div class="slide-img">
+                    <img src="img/gallery/blue.jpg" alt="Комбинация 1">
+                </div>
+                <div class="slide-img">
+                    <img src="img/gallery/blue2.jpg" alt="Комбинация 2">
+                </div>
+                <div class="slide-img">
+                    <img src="img/gallery/blue3.jpg" alt="Комбинация 3">
+                </div>
+                <div class="slide-img">
+                    <img src="img/gallery/grey1.jpg" alt="Комбинация 3">
+                </div>
+                <div class="slide-img">
+                    <img src="img/gallery/grey1.jpg" alt="Комбинация 3">
+                </div>
+                <div>
+                    <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+                    <button class="next" onclick="changeSlide(1)">&#10095;</button>
+                </div>
+            </div>
+        </div>
 
-<main class="main-begin">
-  <h2>Числата и тяхната символика в различни култури</h2>
-    <div class="simple-container">
-      <div class="slider-container">
-        <div class="slide-img">
-          <img src="img/gallery/blue.jpg" alt="Комбинация 1">
+        <div class="text-container">
+            <p>
+                Числата винаги са били нещо повече от обикновени знаци за количествено измерване. В продължение на
+                хилядолетия те
+                са имали
+                <strong>дълбока символика</strong>, която варира в различните култури, религии и философски учения. Те са
+                били
+                използвани за
+                <strong>предсказания, ритуали, магически практики и духовни интерпретации</strong>. Някои числа се считат за
+                носители на
+                <strong>щастие и късмет</strong>, докато други имат <strong>негативна</strong> или дори <strong>зловеща
+                репутация</strong>.
+                <strong>Числата в древните цивилизации:</strong> Древните египтяни придавали <strong>огромно
+                значение</strong> на
+                числата, особено когато ставало въпрос за
+                <strong>божественото и отвъдното</strong>. Те вярвали, че определени числа съдържат <strong>скрити
+                сили</strong>,
+                които влияят на
+                <strong>баланса във Вселената</strong>. Например:
+                <ul>
+                    <li><strong>3</strong> – Представлява триадата на боговете (Ра, Озирис и Хор).</li>
+                    <li><strong>4</strong> – Свързано с елементите на света – земя, въздух, огън и вода.</li>
+                    <li><strong>7</strong> – Числото на съвършенството, използвано в религиозните ритуали.</li>
+                </ul>
+                <strong>Числата в китайската култура:</strong> В китайската традиция някои числа носят <strong>късмет</strong>,
+                докато други са свързани с <strong>нещастие</strong>.
+                Китайците вярват, че <strong>фонетичното звучене на числата</strong> е това, което определя тяхната символика.
+                <ul>
+                    <li><strong>8</strong> – Най-щастливото число, защото звучи като думата за "богатство".</li>
+                    <li><strong>4</strong> – Избягвано число, тъй като звучи като думата за "смърт".</li>
+                    <li><strong>9</strong> – Свързано с дълголетие и вечност.</li>
+                </ul>
+                <strong>Числата в християнството:</strong> Християнската традиция съдържа множество препратки към <strong>свещени
+                числа</strong>:
+                <ul>
+                    <li><strong>3</strong> – Символизира Светата Троица (Отец, Син и Свети Дух).</li>
+                    <li><strong>7</strong> – Числото на съвършенството (седемте дни на сътворението, седемте печата в
+                        Откровението).
+                    </li>
+                    <li><strong>12</strong> – Представлява завършеност (12 апостоли, 12 племена на Израил).</li>
+                    <li><strong>666</strong> – Наричано "числото на звяра", свързано с Антихриста.</li>
+                </ul>
+
+            <h2>Числата в различни бройни системи</h2>
         </div>
-        <div class="slide-img">
-          <img src="img/gallery/blue2.jpg" alt="Комбинация 2">
-        </div>
-        <div class="slide-img">
-          <img src="img/gallery/blue3.jpg" alt="Комбинация 3">
-        </div>
-        <div class="slide-img">
-          <img src="img/gallery/grey1.jpg" alt="Комбинация 3">
-        </div>
-        <div class="slide-img">
-          <img src="img/gallery/grey1.jpg" alt="Комбинация 3">
-        </div>
-        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
-        <button class="next" onclick="changeSlide(1)">&#10095;</button>
+    </div>
+      <div class="simple-container ">
+        <table>
+          <tr>
+            <th>Цифра</th>
+            <th>Двоична система</th>
+            <th>Осмична система</th>
+            <th>16-на система</th>
+            <th>Римски цифри</th>
+            <th>Китайски цифри</th>
+            <th>Майански цифри</th>
+            <th>Брахми цифри</th>
+            <th>Брайлова система</th>
+            <th>Символично значение</th>
+          </tr>
+          <tr><td>0</td><td>0000</td><td>0</td><td>0</td><td>-</td><td>〇</td><td>●</td><td>०</td><td>⠴</td><td class="td-left">Пустота, безкрайност</td></tr>
+          <tr><td>1</td><td>0001</td><td>1</td><td>1</td><td>I</td><td>一</td><td>•</td><td>१</td><td>⠂</td><td class="td-left">Единство, начало</td></tr>
+          <tr><td>2</td><td>0010</td><td>2</td><td>2</td><td>II</td><td>二</td><td>••</td><td>२</td><td>⠆</td><td class="td-left">Двойственост, баланс</td></tr>
+          <tr><td>3</td><td>0011</td><td>3</td><td>3</td><td>III</td><td>三</td><td>•••</td><td>३</td><td>⠒</td><td class="td-left">Хармония, творчество</td></tr>
+          <tr><td>4</td><td>0100</td><td>4</td><td>4</td><td>IV</td><td>四</td><td>••••</td><td>४</td><td>⠲</td><td class="td-left">Стабилност, основа</td></tr>
+          <tr><td>5</td><td>0101</td><td>5</td><td>5</td><td>V</td><td>五</td><td>—</td><td>५</td><td>⠢</td><td class="td-left">Промяна, приключение</td></tr>
+          <tr><td>6</td><td>0110</td><td>6</td><td>6</td><td>VI</td><td>六</td><td>— •</td><td>६</td><td>⠖</td><td class="td-left">Семейство, отговорност</td></tr>
+          <tr><td>7</td><td>0111</td><td>7</td><td>7</td><td>VII</td><td>七</td><td>— ••</td><td>७</td><td>⠶</td><td class="td-left">Духовност, мъдрост</td></tr>
+          <tr><td>8</td><td>1000</td><td>10</td><td>8</td><td>VIII</td><td>八</td><td>— •••</td><td>८</td><td>⠦</td><td class="td-left">Безкрайност, сила</td></tr>
+          <tr><td>9</td><td>1001</td><td>11</td><td>9</td><td>IX</td><td>九</td><td>— —</td><td>९</td><td>⠔</td><td class="td-left">Завършеност, мъдрост</td></tr>
+        </table>
       </div>
     </div>
 
-    <p>
-      Числата винаги са били нещо повече от обикновени знаци за количествено измерване. В продължение на хилядолетия те
-      са имали
-      <strong>дълбока символика</strong>, която варира в различните култури, религии и философски учения. Те са били
-      използвани за
-      <strong>предсказания, ритуали, магически практики и духовни интерпретации</strong>. Някои числа се считат за
-      носители на
-      <strong>щастие и късмет</strong>, докато други имат <strong>негативна</strong> или дори <strong>зловеща
-      репутация</strong>.
-      <strong>Числата в древните цивилизации:</strong> Древните египтяни придавали <strong>огромно значение</strong> на
-      числата, особено когато ставало въпрос за
-      <strong>божественото и отвъдното</strong>. Те вярвали, че определени числа съдържат <strong>скрити сили</strong>,
-      които влияят на
-      <strong>баланса във Вселената</strong>. Например:
-    <ul>
-      <li><strong>3</strong> – Представлява триадата на боговете (Ра, Озирис и Хор).</li>
-      <li><strong>4</strong> – Свързано с елементите на света – земя, въздух, огън и вода.</li>
-      <li><strong>7</strong> – Числото на съвършенството, използвано в религиозните ритуали.</li>
-    </ul>
-    <strong>Числата в китайската култура:</strong> В китайската традиция някои числа носят <strong>късмет</strong>,
-    докато други са свързани с <strong>нещастие</strong>.
-    Китайците вярват, че <strong>фонетичното звучене на числата</strong> е това, което определя тяхната символика.
-  <ul>
-    <li><strong>8</strong> – Най-щастливото число, защото звучи като думата за "богатство".</li>
-    <li><strong>4</strong> – Избягвано число, тъй като звучи като думата за "смърт".</li>
-    <li><strong>9</strong> – Свързано с дълголетие и вечност.</li>
-  </ul>
-
-    <strong>Числата в християнството:</strong> Християнската традиция съдържа множество препратки към <strong>свещени
-    числа</strong>:
-  <ul>
-    <li><strong>3</strong> – Символизира Светата Троица (Отец, Син и Свети Дух).</li>
-    <li><strong>7</strong> – Числото на съвършенството (седемте дни на сътворението, седемте печата в Откровението).
-    </li>
-    <li><strong>12</strong> – Представлява завършеност (12 апостоли, 12 племена на Израил).</li>
-    <li><strong>666</strong> – Наричано "числото на звяра", свързано с Антихриста.</li>
-  </ul>
-
-  <h2>Числата в различни бройни системи</h2>
-
-  <div class="simple-container ">
-    <table>
-      <tr>
-        <th>Цифра</th>
-        <th>Двоична система</th>
-        <th>Осмична система</th>
-        <th>16-на система</th>
-        <th>Римски цифри</th>
-        <th>Китайски цифри</th>
-        <th>Майански цифри</th>
-        <th>Брахми цифри</th>
-        <th>Брайлова система</th>
-        <th>Символично значение</th>
-      </tr>
-      <tr><td>0</td><td>0000</td><td>0</td><td>0</td><td>-</td><td>〇</td><td>●</td><td>०</td><td>⠴</td><td class="td-left">Пустота, безкрайност</td></tr>
-      <tr><td>1</td><td>0001</td><td>1</td><td>1</td><td>I</td><td>一</td><td>•</td><td>१</td><td>⠂</td><td class="td-left">Единство, начало</td></tr>
-      <tr><td>2</td><td>0010</td><td>2</td><td>2</td><td>II</td><td>二</td><td>••</td><td>२</td><td>⠆</td><td class="td-left">Двойственост, баланс</td></tr>
-      <tr><td>3</td><td>0011</td><td>3</td><td>3</td><td>III</td><td>三</td><td>•••</td><td>३</td><td>⠒</td><td class="td-left">Хармония, творчество</td></tr>
-      <tr><td>4</td><td>0100</td><td>4</td><td>4</td><td>IV</td><td>四</td><td>••••</td><td>४</td><td>⠲</td><td class="td-left">Стабилност, основа</td></tr>
-      <tr><td>5</td><td>0101</td><td>5</td><td>5</td><td>V</td><td>五</td><td>—</td><td>५</td><td>⠢</td><td class="td-left">Промяна, приключение</td></tr>
-      <tr><td>6</td><td>0110</td><td>6</td><td>6</td><td>VI</td><td>六</td><td>— •</td><td>६</td><td>⠖</td><td class="td-left">Семейство, отговорност</td></tr>
-      <tr><td>7</td><td>0111</td><td>7</td><td>7</td><td>VII</td><td>七</td><td>— ••</td><td>७</td><td>⠶</td><td class="td-left">Духовност, мъдрост</td></tr>
-      <tr><td>8</td><td>1000</td><td>10</td><td>8</td><td>VIII</td><td>八</td><td>— •••</td><td>८</td><td>⠦</td><td class="td-left">Безкрайност, сила</td></tr>
-      <tr><td>9</td><td>1001</td><td>11</td><td>9</td><td>IX</td><td>九</td><td>— —</td><td>९</td><td>⠔</td><td class="td-left">Завършеност, мъдрост</td></tr>
-    </table>
-  </div>
-
 </main>
 <footer>
-  <div id="footer-container"></div>
+    <div id="footer-container"></div>
 </footer>
 </body>
 </html>
