@@ -318,12 +318,13 @@ li.dropdown { /* главно меню - dropdown*/
     justify-content: space-around; /* Раздалечава ги равномерно */
     margin-bottom: 20px;
     border-radius: 10px;
+
 }
 
 /* тези 2 картини една до друга - размерът им спрямо горния контейнер и рамката */
 .image-2-container img {
     width: 45%;
-    border-radius: 10px; /* Закръглени ръбове */
+    border-radius: 20px; /* Закръглени ръбове */
     overflow: visible;
     box-shadow: 0 0 20px rgb(6, 47, 92);
 }
