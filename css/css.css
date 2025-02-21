@@ -389,6 +389,7 @@ box-shadow: 0 0 60px rgba(95, 61, 65, 0.64);
     gap: 20px;
     max-width: 60%;
     text-align: right;
+    overflow: hidden;
 }
 
 #map {
@@ -400,6 +401,7 @@ box-shadow: 0 0 60px rgba(95, 61, 65, 0.64);
     /*height: 400px; !* Минимална височина *!*/
     margin: 20px auto; /* Центриране */
     border-radius: 20px;
+    overflow: hidden;
 }
 
 
