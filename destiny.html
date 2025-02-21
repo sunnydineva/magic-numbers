@@ -15,7 +15,7 @@
     loadScript("js/head-content.js");
     loadScript("js/navbar.js");
     loadScript("js/footer.js");
-    loadScript("js/calculations/calculationsNumerology.js");
+    loadScript("js/calculationsNumerology.js");
   </script>
   <div id="head-container"></div>
 </head>
@@ -27,7 +27,7 @@
   <h2>Нумерологичен анализ на датата на раждане</h2>
   <section>
     <div class="image-text-container">
-      <img alt="" class="container-element-40" src="img/numbers_640_sq_sq_640.jpg"/>
+<!--      <img alt="" class="container-element-40" src="img/numbers_640_sq_sq_640.jpg"/>-->
       <p>
         <strong>Дата на раждане</strong> не е просто числов израз – тя съдържа
         <strong>скрит код</strong>, който разкрива <strong>житейския ни път</strong>, <strong>съдбата</strong> и
@@ -84,22 +84,26 @@
 
   <section>
     <!--    резултати от изчисленията - да не се прекръстват id-тата!-->
-    <br><br>
-    <div class="image-text-container">
-
+    <div class="numerology-form-container">
       <form id="numerologyForm">
         <label for="birthdate">Дата на раждане:</label>
         <input id="birthdate" onclick="clearResultDescription()" required type="date">
         <button onclick="calculateDestinyNumber()" type="button">Изчисли Число на съдбата</button>
       </form>
     </div>
-    <div class="numerology-result-container">
+
+    <div class="numerology-result-container" id="numerology-result-container">
       <!--  <div class="float-left" id="result"></div>-->
-      <div id="result"></div>
-      <div id="description"></div>
-      <div id="result-img"></div>
-    </div>
-    <div class="image-text-container">
+      <div>
+        <div id="result"></div>
+        <div id="description"></div>
+      </div>
+      <div>
+        <div id="result-img"></div>
+      </div>
+    </div>>
+
+    <div class="main-container">
       <table>
         <tr>
           <th>Число</th>

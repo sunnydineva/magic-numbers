@@ -9,6 +9,8 @@ function calculateNameNumber() {
     return;
   }
 
+  showResultContainer();
+
   // Число на името (по Питагоровата система)
   const numerologyTable = {
     'А': 1, 'Б': 2, 'В': 3, 'Г': 4, 'Д': 5, 'Е': 6, 'Ж': 7, 'З': 8, 'И': 9,
@@ -81,6 +83,23 @@ function calculateNameNumber() {
       document.getElementById('description').innerHTML = "<p class='italic-text'>Няма налично описание за това число.</p>";
     });
 
+  // **Фетч за изображение**
+  let imgElement = document.getElementById('result-img');
+
+  // Задава ново изображение спрямо nameNumber
+  imgElement.innerHTML = `<img src="../../resources/result-img/${nameNumber}.jpg" alt="Изображение за число ${nameNumber}" class="img-result" id="img-result">`;
+  formatResultImg();
+
+  // Проверка дали изображението съществува
+  let testImage = new Image();
+  testImage.src = `../../resources/result-img/${nameNumber}.jpg`;
+  testImage.onload = function () {
+    imgElement.innerHTML = `<img src="../../resources/result-img/${nameNumber}.jpg" alt="Изображение за число ${nameNumber}" class="img-result">`;
+  };
+  testImage.onerror = function () {
+    imgElement.innerHTML = "<p class='italic-text'>Няма налично изображение за това число.</p>";
+  };
+
 
   // document.getElementById('result').innerHTML = `
   //       <p><strong>Число на името:</strong> ${nameNumber}</p>
@@ -112,6 +131,9 @@ function calculateDestinyNumber() {
     return;
   }
 
+
+  showResultContainer();
+
   // Число на съдбата (сума на цифрите в датата)
   let destinyNumber = birthdate.replace(/-/g, '').split('').reduce((sum, num) => sum + parseInt(num), 0);
   while (destinyNumber > 9) {
@@ -121,10 +143,72 @@ function calculateDestinyNumber() {
   document.getElementById('result').innerHTML = `
                 <p><strong>Число на съдбата:</strong> ${destinyNumber}</p>
             `;
+
+  // изписва Число на името и Описание, заредено от ресурсни файлове, според стойността на nameNumber
+  // ако ресурсен файл за съответното число липсва - изписва съобщение за грешка, вместо 404
+  fetch(`../../resources/destiny/${destinyNumber}.txt`)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`Файлът не е намерен (${response.status})`);
+        }
+        return response.text();
+      })
+      .then(description => {
+        document.getElementById('description').innerHTML = `
+            <p class='italic-text'><strong>Описание:</strong> ${description}</p>
+        `;
+      })
+      .catch(error => {
+        console.error("Грешка при зареждането на файла:", error);
+        document.getElementById('description').innerHTML = "<p class='italic-text'>Няма налично описание за това число.</p>";
+      });
+
+  // **Фетч за изображение**
+  let imgElement = document.getElementById('result-img');
+
+  // Задава ново изображение спрямо nameNumber
+  imgElement.innerHTML = `<img src="../../resources/result-img/${destinyNumber}.jpg" alt="Изображение за число ${destinyNumber}" class="img-result" id="img-result">`;
+  formatResultImg();
+
+  // Проверка дали изображението съществува
+  let testImage = new Image();
+  testImage.src = `../../resources/result-img/${destinyNumber}.jpg`;
+  testImage.onload = function () {
+    imgElement.innerHTML = `<img src="../../resources/result-img/${destinyNumber}.jpg" alt="Изображение за число ${destinyNumber}" class="img-result">`;
+  };
+  testImage.onerror = function () {
+    imgElement.innerHTML = "<p class='italic-text'>Няма налично изображение за това число.</p>";
+  };
 }
 
 function clearResultDescription()
 {
   document.getElementById('result').innerHTML = '';
   document.getElementById('description').innerHTML = '';
+  hideResultContainer();
 }
+
+function showResultContainer() {
+  let element = document.getElementById("numerology-result-container");
+  element.style.display = "flex"; // Променя display: none; на block
+}
+
+function hideResultContainer() {
+  let element = document.getElementById("numerology-result-container");
+  element.style.display = "none"; // Променя display: none; на block
+}
+
+
+function formatResultImg() {
+  let element = document.getElementById("img-result");
+  element.style.borderRadius = "20px";
+  // element.style.transform = "scale(1.6)";
+  // element.style.transition = "transform 0.5s ease-in-out, color 0.3s ease-in-out;";
+  // element.style.boxShadow = "0 0 15px rgba(61, 80, 95, 0.64)";
+}
+
+
+// transform: scale(1.2); /* увеличава заглавието при ховър */
+// color: #3d3e47; /* променя цвета на текста на златист */
+// transition: transform 0.5s ease-in-out, color 0.3s ease-in-out;
+// box-shadow: 0 0 15px rgba(61, 80, 95, 0.64);

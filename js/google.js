@@ -1,4 +1,3 @@
-// const API_KEY = "AIzaSyAgfZhcbUTjX4Sy8SFAcf_fj0TwMFLfyQQ"
 const API_KEY = "AIzaSyAfmfRd1F3K3g0R5t5d4GPEJNs8-cu8qDE"
 
 
@@ -10,7 +9,7 @@ function loadGoogleMaps() {
         }
 
         const script = document.createElement("script");
-        script.src = `https://maps.googleapis.com/maps/api/js?key=${API_KEY}&callback=initMap`;
+        script.src = `https://maps.googleapis.com/maps/api/js?key=${API_KEY}&callback=initMap&libraries=marker`;
         script.async = true;
         script.defer = true;
 
@@ -29,6 +28,7 @@ function initMap() {
     }
 
     const map = new google.maps.Map(mapElement, {
+        mapId: "b1e28bde90e86710",
         zoom: 15
     });
 
@@ -41,15 +41,18 @@ function geocodeAddress(address, map) {
     geocoder.geocode({ address: address }, (results, status) => {
         if (status === "OK") {
             map.setCenter(results[0].geometry.location);
-            new google.maps.Marker({
+
+            const marker = new google.maps.marker.AdvancedMarkerElement({ // ✅ Новият Advanced Marker
                 map: map,
                 position: results[0].geometry.location
             });
+
         } else {
             console.error("Geocoding failed: " + status);
         }
     });
 }
+
 
 loadGoogleMaps().then(() => {
     initMap();

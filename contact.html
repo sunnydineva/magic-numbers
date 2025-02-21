@@ -29,9 +29,9 @@
     <div id="navbar-container"></div>
 </header>
 
-<main class="main-begin">
-    <div class="image-text-container">
-
+<!--<main class="main-begin">-->
+<main class="main-contact">
+<!--    <div class="main-container">-->
         <div class="contact-container">
             <!--        <div class="container-element-60">-->
             <div>
@@ -39,9 +39,9 @@
                     <div>
                         <label for="name">Име:</label>
                         <input type="text" id="name" name="name" required
-                                oninvalid="this.setCustomValidity('Моля, въведете вашето име!')"
-                                oninput="this.setCustomValidity('')"
-                                placeholder="Вашето име">
+                               oninvalid="this.setCustomValidity('Моля, въведете вашето име!')"
+                               oninput="this.setCustomValidity('')"
+                               placeholder="Вашето име">
 
                     </div>
                     <div>
@@ -54,9 +54,9 @@
                     <div>
                         <label for="message">Съобщение:</label>
                         <textarea id="message" name="message" required
-                                oninvalid="this.setCustomValidity('Моля, попълнете съобщение!')"
-                                oninput="this.setCustomValidity('')"
-                                placeholder="Текст на съобщението">
+                                  oninvalid="this.setCustomValidity('Моля, попълнете съобщение!')"
+                                  oninput="this.setCustomValidity('')"
+                                  placeholder="Текст на съобщението">
                         </textarea>
                     </div>
                     <div>
@@ -64,13 +64,16 @@
                     </div>
                 </form>
             </div>
+            <!--        </div>-->
+            <div id="map" class="slider-container"></div>
         </div>
-        <div>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2764.555016041253!2d27.905173075977007!3d43.199769771127244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40a453f2f4b4f461%3A0x3469a75b61a45a2e!2sCenterOdesos%2C%20ul.%20%22Debar%22%2058%2C%209000%20Varna!5e1!3m2!1sen!2sbg!4v1739994077600!5m2!1sen!2sbg" width="400" height="485" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>  </div>
-        </div>
-        <div id="map"></div>
-
-    </div>
+<!--        <div>-->
+<!--            <div>-->
+<!--                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2764.555016041253!2d27.905173075977007!3d43.199769771127244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40a453f2f4b4f461%3A0x3469a75b61a45a2e!2sCenterOdesos%2C%20ul.%20%22Debar%22%2058%2C%209000%20Varna!5e1!3m2!1sen!2sbg!4v1739994077600!5m2!1sen!2sbg"-->
+<!--                        width="400" height="485" style="border:0;" allowfullscreen="" loading="lazy"-->
+<!--                        referrerpolicy="no-referrer-when-downgrade"></iframe>-->
+<!--            </div>-->
+<!--    </div>-->
 </main>
 <!--// Зареждаме Google Maps API-->
 </body>

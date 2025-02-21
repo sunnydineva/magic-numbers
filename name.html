@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html lang="bg">
 <head>
   <meta charset="UTF-8">
   <title>Нумерологичен анализ на името</title>
@@ -16,7 +15,7 @@
     loadScript("js/head-content.js");
     loadScript("js/navbar.js");
     loadScript("js/footer.js");
-    loadScript("js/calculations/calculationsNumerology.js");
+    loadScript("js/calculationsNumerology.js");
   </script>
   <div id="head-container"></div>
 </head>
@@ -30,7 +29,7 @@
   <h2>Нумерологичен анализ на името</h2>
   <section>
     <div class="image-text-container">
-      <img alt="" class="container-element-40" src="img/numbers_640_sq.jpg"/>
+<!--      <img alt="" class="container-element-40" src="img/numbers_640_sq.jpg"/>-->
       <p> Тайната на личността - <strong>числото на името</strong> <br>
         В нумерологията числото на името се откроява като една от най-важните
         фигури. Извлича се от буквите в името на човек и разкрива отличителните черти, наклонности и енергичен
@@ -74,21 +73,27 @@
 
   <section>
     <!--    резултати от изчисленията - да не се прекръстват id-тата!-->
-    <br><br>
-    <div class="image-text-container">
+
+    <div class="numerology-form-container">
       <form id="numerologyForm">
         <label for="name">Въведете Вашите три имена:</label>
         <input id="name" class="full-name" onclick="clearResultDescription()" required type="text">
         <button onclick="calculateNameNumber()" type="button">Изчисли Число на името</button>
       </form>
     </div>
-    <div class="numerology-result-container">
+
+    <div class="numerology-result-container" id="numerology-result-container">
       <!--  <div class="float-left" id="result"></div>-->
-      <div id="result"></div>
-      <div id="description"></div>
-      <div id="result-img"></div>
-    </div>
-    <div class="image-text-container">
+      <div>
+        <div id="result"></div>
+        <div id="description"></div>
+      </div>
+      <div>
+        <div id="result-img"></div>
+      </div>
+    </div>>
+
+    <div class="main-container">
       <table>
         <tr>
           <th>Число на името</th>
