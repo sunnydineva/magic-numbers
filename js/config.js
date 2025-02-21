@@ -8,7 +8,7 @@ function loadScript(scriptPath) {
   // script.src = baseURL + scriptPath;
   // script.defer = true;
   // // document.head.appendChild(script);
-  document.write(`<script src="${baseURL}${scriptPath}"><\/script>`)
+  document.write(`<script src="${baseURLIndex}${scriptPath}"><\/script>`)
 }
 
 // $(document).ready(function () {
