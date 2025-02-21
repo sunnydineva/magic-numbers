@@ -19,10 +19,10 @@
 
     <!--    скрипт, адаптиращ сайта да работи от github или от localhost-->
     <script>
-        let baseURL = window.location.hostname === "sunnydineva.github.io"
+        let baseURLIndex = window.location.hostname === "sunnydineva.github.io"
             ? "https://sunnydineva.github.io/magic-numbers/"
             : "/";
-        document.write(`<script src="${baseURL}js/config.js"><\/script>`);
+        document.write(`<script src="${baseURLIndex}js/config.js"><\/script>`);
     </script>
     <!--  скриптове, зареждащи head-съдържанието със стилове и т.н, навигационния бар-->
     <script>
