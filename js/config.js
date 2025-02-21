@@ -1,14 +1,14 @@
-// // `baseURL` отново се проверява, защото `config.js` може да не знае къде се намира
-// const baseURL = window.location.hostname === "sunnydineva.github.io"
-//   ? "https://sunnydineva.github.io/magic-numbers/"
-//   : "/";
+// `baseURL` отново се проверява, защото `config.js` може да не знае къде се намира
+const baseURLConfig = window.location.hostname === "sunnydineva.github.io"
+  ? "https://sunnydineva.github.io/magic-numbers/"
+  : "/";
 
 function loadScript(scriptPath) {
   // let script = document.createElement("script");
   // script.src = baseURL + scriptPath;
   // script.defer = true;
   // // document.head.appendChild(script);
-  document.write(`<script src="${baseURLIndex}${scriptPath}"><\/script>`)
+  document.write(`<script src="${baseURLConfig}${scriptPath}"><\/script>`)
 }
 
 // $(document).ready(function () {
