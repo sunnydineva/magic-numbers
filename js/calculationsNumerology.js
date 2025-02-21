@@ -97,7 +97,7 @@ function calculateNameNumber() {
 
   // Задава ново изображение спрямо nameNumber
   // imgElement.innerHTML = `<img src=../../resources/result-img/${nameNumber}.jpg" alt="Изображение за число ${nameNumber}" class="img-result" id="img-result">`;
-  imgElement.innerHTML = `<img src=${resourceUrl()}+/resources/result-img/${nameNumber}.jpg" alt="Изображение за число ${nameNumber}" class="img-result" id="img-result">`;
+  imgElement.innerHTML = `<img src=${resourceUrl()}/resources/result-img/${nameNumber}.jpg" alt="Изображение за число ${nameNumber}" class="img-result" id="img-result">`;
   formatResultImg();
 
   // Проверка дали изображението съществува
