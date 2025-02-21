@@ -364,6 +364,7 @@ box-shadow: 0 0 60px rgba(95, 61, 65, 0.64);
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.23);
     margin-bottom: 1vh;
+
 }
 /*==============================================================================*/
 /*========разни останали ===========================================================*/
@@ -379,17 +380,36 @@ box-shadow: 0 0 60px rgba(95, 61, 65, 0.64);
 }
 
 .contact-container {
-    position: static;
-    top: 20%;
+    /*position: absolute;*/
+    /*top: 20%;*/
     display: flex;
-    justify-content: space-between;
-    /*margin-top: 20px;*/
-    width: 90%;
-    padding: 10vw 13Vw;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+
+    margin-top: 13%;
+    margin-left: 20%;
+    /*margin-bottom: 20px;*/
+
+    /*padding: 10vw 13Vw;*/
     gap: 20px;
-    max-width: 60%;
+    max-width: 70%;
     text-align: right;
     overflow: hidden;
+    /*margin-bottom: 0;*/
+    /*box-shadow: red;*/
+}
+
+.main-contact {
+    /*margin-top: 10vh;*/
+    /*position: relative;*/
+    overflow: hidden;
+    top: 30%;
+    /*max-width: 90%;*/
+    margin: 40px auto; /* пентрира съдържанието и дава отстояние отгоре и отдолу */
+    padding: 20px;
+    border-radius: 10px; /* Закръглени ръбове */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 #map {
@@ -397,9 +417,10 @@ box-shadow: 0 0 60px rgba(95, 61, 65, 0.64);
     /*max-width:60vw;*/
     display: block;
     min-width: 40vw;
+    max-height: 41vh;
     height: 60vh;
     /*height: 400px; !* Минимална височина *!*/
-    margin: 20px auto; /* Центриране */
+    margin: 20px 20px; /* Центриране */
     border-radius: 20px;
     overflow: hidden;
 }
@@ -426,18 +447,13 @@ box-shadow: 0 0 60px rgba(95, 61, 65, 0.64);
 }
 
 
-
 .main-begin {
     margin-top: 30vh;
 }
 
-.main-contact {
-    margin-top: 10vh;
-    /*position: relative;*/
-}
-
 .form-container {
     display: block;
+    margin-bottom: 20px;
 
 }
 
