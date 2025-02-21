@@ -9,9 +9,16 @@
     <script>
         // откриваме правилния baseURL за локален сървър или GitHub Pages
         let baseURL = window.location.hostname === "sunnydineva.github.io"
+            // ? "https://sunnydineva.github.io/magic-numbers/"
+            // : "/";
+        document.write(`<script src="${baseURL}js/config.js"><\/script>`)
+    </script>
+
+    <script>
+        let baseURLFavicon = window.location.hostname === "sunnydineva.github.io"
             ? "https://sunnydineva.github.io/magic-numbers/"
             : "/";
-        document.write(`<script src="${baseURL}js/config.js"><\/script>`)
+        document.write(`<link rel="icon" type="image/png" href="${baseURLFavicon}favicon.ico?v=1">`);
     </script>
 
     <!--  скриптове, зареждащи head-съдържанието със стилове и т.н, навигационния бар-->
