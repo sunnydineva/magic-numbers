@@ -177,7 +177,7 @@ function calculateDestinyNumber() {
   let imgElement = document.getElementById('result-img');
 
   // Задава ново изображение спрямо nameNumber
-  imgElement.innerHTML = `<img src="${resourceUrl()}+//resources/result-img/${destinyNumber}.jpg" alt="Изображение за число ${destinyNumber}" class="img-result" id="img-result">`;
+  imgElement.innerHTML = `<img src="${resourceUrl()}resources/result-img/${destinyNumber}.jpg" alt="Изображение за число ${destinyNumber}" class="img-result" id="img-result">`;
   formatResultImg();
 
   // Проверка дали изображението съществува
