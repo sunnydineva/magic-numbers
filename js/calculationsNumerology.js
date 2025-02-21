@@ -1,3 +1,12 @@
+
+function resourceUrl() {
+  return window.location.hostname === "sunnydineva.github.io"
+      ? "https://sunnydineva.github.io/magic-numbers/"
+      : "/";
+  // document.write(`<script src="${baseURL}js/config.js"><\/script>`);
+}
+
+
 function calculateNameNumber() {
   if (!validateFullName()) {
     return; // Спира изпълнението, ако името не е валидно
@@ -63,7 +72,7 @@ function calculateNameNumber() {
 
   // изписва Число на името и Описание, заредено от ресурсни файлове, според стойността на nameNumber
   // ако ресурсен файл за съответното число липсва - изписва съобщение за грешка, вместо 404
-  fetch(`../../resources/name/${nameNumber}.txt`)
+  fetch(`resourceUrl()+../../resources/name/${nameNumber}.txt`)
     .then(response => {
       if (!response.ok) {
         throw new Error(`Файлът не е намерен (${response.status})`);
@@ -87,14 +96,15 @@ function calculateNameNumber() {
   let imgElement = document.getElementById('result-img');
 
   // Задава ново изображение спрямо nameNumber
-  imgElement.innerHTML = `<img src="../../resources/result-img/${nameNumber}.jpg" alt="Изображение за число ${nameNumber}" class="img-result" id="img-result">`;
+  // imgElement.innerHTML = `<img src=../../resources/result-img/${nameNumber}.jpg" alt="Изображение за число ${nameNumber}" class="img-result" id="img-result">`;
+  imgElement.innerHTML = `<img src=${resourceUrl()}+/resources/result-img/${nameNumber}.jpg" alt="Изображение за число ${nameNumber}" class="img-result" id="img-result">`;
   formatResultImg();
 
   // Проверка дали изображението съществува
   let testImage = new Image();
-  testImage.src = `../../resources/result-img/${nameNumber}.jpg`;
+  testImage.src = `resourceUrl()+../../resources/result-img/${nameNumber}.jpg`;
   testImage.onload = function () {
-    imgElement.innerHTML = `<img src="../../resources/result-img/${nameNumber}.jpg" alt="Изображение за число ${nameNumber}" class="img-result">`;
+    imgElement.innerHTML = `<img src="${resourceUrl()}resources/result-img/${nameNumber}.jpg" alt="Изображение за число ${nameNumber}" class="img-result">`;
   };
   testImage.onerror = function () {
     imgElement.innerHTML = "<p class='italic-text'>Няма налично изображение за това число.</p>";
@@ -146,7 +156,7 @@ function calculateDestinyNumber() {
 
   // изписва Число на името и Описание, заредено от ресурсни файлове, според стойността на nameNumber
   // ако ресурсен файл за съответното число липсва - изписва съобщение за грешка, вместо 404
-  fetch(`../../resources/destiny/${destinyNumber}.txt`)
+  fetch(`resourceUrl()+../../resources/destiny/${destinyNumber}.txt`)
       .then(response => {
         if (!response.ok) {
           throw new Error(`Файлът не е намерен (${response.status})`);
@@ -167,14 +177,14 @@ function calculateDestinyNumber() {
   let imgElement = document.getElementById('result-img');
 
   // Задава ново изображение спрямо nameNumber
-  imgElement.innerHTML = `<img src="../../resources/result-img/${destinyNumber}.jpg" alt="Изображение за число ${destinyNumber}" class="img-result" id="img-result">`;
+  imgElement.innerHTML = `<img src="${resourceUrl()}+//resources/result-img/${destinyNumber}.jpg" alt="Изображение за число ${destinyNumber}" class="img-result" id="img-result">`;
   formatResultImg();
 
   // Проверка дали изображението съществува
   let testImage = new Image();
-  testImage.src = `../../resources/result-img/${destinyNumber}.jpg`;
+  testImage.src = `resourceUrl()+../../resources/result-img/${destinyNumber}.jpg`;
   testImage.onload = function () {
-    imgElement.innerHTML = `<img src="../../resources/result-img/${destinyNumber}.jpg" alt="Изображение за число ${destinyNumber}" class="img-result">`;
+    imgElement.innerHTML = `<img src="${resourceUrl()}resources/result-img/${destinyNumber}.jpg" alt="Изображение за число ${destinyNumber}" class="img-result">`;
   };
   testImage.onerror = function () {
     imgElement.innerHTML = "<p class='italic-text'>Няма налично изображение за това число.</p>";
