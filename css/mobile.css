@@ -14,7 +14,6 @@ and (max-width: 480px) and (max-height: 855px) {
     /* mobile */
     body {
         font-size: 3vw; /* nо-голям основен текст за мобилни */
-        /*font-size: 1rem; !* nо-голям основен текст за мобилни *!*/
     }
     /* mobile */
     p, li {
@@ -50,11 +49,9 @@ and (max-width: 480px) and (max-height: 855px) {
 
     /*mobile */
     .main-container {
-        /*max-width: 1200px; !* За да не се разтяга цялата страница *!*/
         width: 100%;
-        /*margin: 40px auto; !* Центрира съдържанието и дава отстояние отгоре и отдолу *!*/
         padding: 20px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Лек сянка за по-добра видимост */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 
 
     }
@@ -119,11 +116,6 @@ and (max-width: 480px) and (max-height: 855px) {
         width: 10%;
     }
 
-
-    /* mobile */
-    .container-element-40, .container-element-60 { /* за мобилни става центрирано */
-        max-width: 100%;
-    }
     /* mobile */
     .input, label {
         /*  по-големи за мобилен телефон*/

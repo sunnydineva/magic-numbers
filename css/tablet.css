@@ -9,20 +9,6 @@
         font-size: 6.5vw;
     }
 
-    /* ХАМБУРГЕР - ТАБЛЕТ */
-    /*.menu-toggle {*/
-    /*    display: block;*/
-    /*}*/
-
-    /*.mobile-menu {*/
-    /*    display: block;*/
-    /*    top: 0;*/
-    /*    left: 0;*/
-    /*    width: 100%;*/
-    /*    background-color: rgba(34, 34, 34, 0.6);*/
-    /*    z-index: 1000;*/
-    /*}*/
-
     /*     навигация (меню) */
     nav li {
         width: 100%;
