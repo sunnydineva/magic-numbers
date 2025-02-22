@@ -1,6 +1,5 @@
 const API_KEY = "AIzaSyAfmfRd1F3K3g0R5t5d4GPEJNs8-cu8qDE"
 
-
 function loadGoogleMaps() {
     return new Promise((resolve, reject) => {
         if (window.google && window.google.maps) {
@@ -42,7 +41,8 @@ function geocodeAddress(address, map) {
         if (status === "OK") {
             map.setCenter(results[0].geometry.location);
 
-            const marker = new google.maps.marker.AdvancedMarkerElement({ // ✅ Новият Advanced Marker
+            let marker;
+            marker = new google.maps.marker.AdvancedMarkerElement({ // ✅ Новият Advanced Marker
                 map: map,
                 position: results[0].geometry.location
             });

@@ -4,14 +4,6 @@
 <head>
   <meta charset="utf-8">
   <title>Страницата не е намерена</title>
-  <script>
-    let baseURL = window.location.hostname === "sunnydineva.github.io"
-      ? "https://sunnydineva.github.io/magic-numbers/"
-      : "/";
-
-    document.write(`<script src="${baseURL}js/head-content.js"><\/script>`);
-    // document.write(`<script src="${baseURL}js/navbar.js"><\/script>`);
-  </script>
   <div id="head-container"></div>
   <style>
 
@@ -24,6 +16,47 @@
     }
     </style>
 </head>
+
+<header class=header-sticky>
+  <div class="height-60">
+    <div class="-header-logo-container">
+      <h1>
+        <a href="index.html">
+          <img alt="©" class="logo" src="img/logo.jpg"/>
+          <img alt="©" class="logo" src="resources/h1.jpg"/>
+        </a>
+        <!--                </a> Тайнственият свят на числата-->
+      </h1>
+    </div>
+
+    <nav>
+      <button class="hamburger" onclick="toggleMenu()">☰</button>
+      <ul id="navMenu">
+        <li>
+          <a href="index.html">Начало</a>
+        </li>
+
+        <li><a href="symbolism.html">Символика</a></li>
+        <li><a href="math.html">Математика</a></li>
+        <li><a href="daily.html">Числа в ежедневието</a></li>
+
+        <li class="dropdown">
+          <a href="javascript:void(0)" class="dropbtn">Нумерология</a>
+          <div class="dropdown-content">
+            <a href="name.html">Анализ на име</a>
+            <a href="destiny.html">Анализ на дата на раждане</a>
+          </div>
+
+        <li class="dropdown">
+          <a href="javascript:void(0)" class="dropbtn">За нас</a>
+
+          <div class="dropdown-content">
+            <a href="contact.html">Контакти</a>
+          </div>
+      </ul>
+    </nav>
+  </div>
+</header>
 
 <body>
   <h1>Страницата не е намерена</h1>

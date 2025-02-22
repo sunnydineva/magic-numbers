@@ -1,37 +1,180 @@
-
 /* за таблети (481px - 768px) */
-@media (min-width: 481px) and (max-width: 768px) and (max-height: 1200px) {
+/*@media (min-width: 481px) and (max-width: 768px) and (max-height: 1200px) {*/
+@media (min-width: 481px) and (max-width: 810px) and (max-height: 1200px) {
+
+    .main-begin {
+        position: absolute;
+        top: 15% !important;
+        width: 98%;
+        margin: 0 auto;
+    }
+
+    .image-left-640{
+        max-width: 60%;
+    }
+
+    .image-left-320{
+        max-width: 30%;
+    }
+
+    .main-contact {
+        display: flex;
+        flex-direction: row;
+    }
+
     body {
-        font-size: 2.5vw; /* Оставяме текста удобен за четене */
+        font-size: 2vw;
     }
 
-    h1 {
-        font-size: 6.5vw;
+    p, li {
+        font-size: 1rem;
     }
 
-    /*     навигация (меню) */
-    nav li {
-        width: 100%;
-        text-align: center;
-        padding: 5px;
+    h1, h2, h3 {
+        font-size: 3vw;
+    }
+
+    h4 {
+        font-size: 1.5vw;
+    }
+
+    .hamburger {
+        display: none; /* скрита икона, тъй като на таблети ще има нормално меню */
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #535362;;
+        opacity: 0.90;
+    }
+
+    nav ul li {
+        display: inline-block;
+        width: 13%; /*ако менюто ми е от 6 елемента*/
+        padding: 10px;
     }
 
     nav ul li a {
-        font-size: 1.2rem;
-        padding: 12px 10px;
+        /*font-size: 2.5vw;*/
+        font-size: 0.8rem;
+        padding: 12px 8px;
+    }
+
+    nav li a:hover:not(.active) {
+        background-color: #535362;;
+        opacity: 0.5;
+        transform: scale(1.2);
+        transition: all 0.5s ease;
+    }
+
+    /* подменюта */
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #535362;;
+        width: auto;
+        padding: 10px;
+        border-radius: 10px;
+        font-weight: bold;
+    }
+
+    .dropdown:hover {
+        display: block;
+        background-color: #535362;
+    }
+
+    li a:hover, .dropdown:hover .dropbtn:hover {
+        background-color: #535362;;
     }
 
     .img-result {
-        width: 80%;
-        margin: 2vh auto;
-    }
-
-    .image-left-640, .image-left-320 {
-        float: none;
-        align-content: center;
-    }
-
-    .image-text-container{
+        width: 70%;
+        margin: 3vh auto;
         display: block;
     }
+
+    .main-container {
+        width: 90%;
+        margin: 0 auto;
+        padding: 30px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .main-container-no-x{
+        max-width: 95%;
+    }
+
+    .image-2-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .image-2-container img {
+        width: 45%;
+    }
+
+    .numerology-form-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 2vw 2vw;
+    }
+
+    .contact-iframe, iframe, #map {
+        border-radius: 20px;
+        position: relative;
+        height: 560px;
+        width: 100%;
+    }
+
+    .input, label {
+        font-size: 1rem;
+        width: 80%;
+        max-width: 200px;
+    }
+
+    .button {
+        min-width: 30vw;
+        max-width: 30vw;
+    }
+
+    .full-name{
+        min-width: 30vw;
+        max-width: 40vw;
+    }
+
+    .slider-container {
+        width: 80vw;
+        margin: 20px auto;
+        overflow: hidden;
+    }
+
+    .slide-img {
+        width: 80vw;
+        height: auto;
+    }
+
+    /* позиции на бутоните  до картинката*/
+    .prev {
+        left: 20vw;
+        top: 26%;
+        transform: translateX(1vw);
+    }
+
+    .next {
+        right: 18vw;
+        top: 26%;
+        transform: translateX(-3vw);
+    }
+
+    ::placeholder {
+        font-size: 14px; /* или друга подходяща стойност */
+        color: #888;     /* цвят по избор */
+    }
+
 }

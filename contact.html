@@ -6,92 +6,132 @@
     <title>Тайнственият свят на числата</title>
 
     <meta charset="UTF-8">
-    <script>
-        // откриваме правилния baseURL за локален сървър или GitHub Pages
-        let baseURL = window.location.hostname === "sunnydineva.github.io"
-            ? "https://sunnydineva.github.io/magic-numbers/"
-            : "/";
-        document.write(`<script src="${baseURL}js/config.js"><\/script>`)
-    </script>
-
-    <script>
-        document.write(`<link rel="icon" type="image/png" href="${baseURL}favicon.ico?v=1">`);
-    </script>
-
-    <!--  скриптове, зареждащи head-съдържанието със стилове и т.н, навигационния бар-->
-    <script>
-        loadScript("js/head-content.js");
-        loadScript("js/navbar.js");
-        loadScript("js/footer.js");
-        loadScript("js/google.js");
-    </script>
-    <div id="head-container"></div><!--    <link rel="stylesheet" href="css/contact-us.css">-->
-
+    <link href="css/css.css" rel="stylesheet" type="text/css"/>
+    <link href="css/mobile.css" rel="stylesheet" type="text/css"/>
+    <link href="css/tablet.css" rel="stylesheet" type="text/css"/>
+<!--    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap" rel="stylesheet">-->
 </head>
 <body>
-<header>
-    <div id="navbar-container"></div>
+
+<header class=header-sticky>
+
+    <div class="height-60">
+        <div class="-header-logo-container">
+            <h1>
+                <a href="index.html">
+                    <img alt="©" class="logo" src="img/logo.jpg"/>
+                    <img alt="©" class="logo" src="resources/h1.jpg"/>
+                </a>
+                <!--                </a> Тайнственият свят на числата-->
+            </h1>
+        </div>
+
+        <nav>
+            <button class="hamburger" onclick="toggleMenu()">☰</button>
+            <ul id="navMenu">
+                <li>
+                    <a href="index.html">
+                        Начало
+                    </a>
+                </li>
+
+                <li><a href="symbolism.html">Символика</a></li>
+                <li><a href="math.html">Математика</a></li>
+                <li><a href="daily.html">Числа в ежедневието</a></li>
+
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Нумерология</a>
+                    <div class="dropdown-content">
+                        <a href="name.html">Анализ на име</a>
+                        <a href="destiny.html">Анализ на дата на раждане</a>
+                    </div>
+
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">
+                        За нас</a>
+
+                    <div class="dropdown-content">
+                        <a href="contact.html">Контакти</a>
+                    </div>
+            </ul>
+        </nav>
+    </div>
 </header>
 
-<!--<main class="main-begin">-->
-<main class="main-contact">
-<!--    <div class="main-container">-->
+
+<main class="main-contact ">
         <div class="contact-container">
             <div>
                 <form method="POST" id="contactForm">
                     <div>
-                        <label for="name">Име:</label>
-                        <input type="text" id="name" name="name" required
-                               oninvalid="this.setCustomValidity('Моля, въведете вашето име!')"
-                               oninput="this.setCustomValidity('')"
-                               placeholder="Вашето име">
-
-                    </div>
+                        <div>
+                            <label for="name">Име:</label>
+                            <input type="text" id="name" name="name" required
+                                   oninvalid="this.setCustomValidity('Моля, въведете вашето име!')"
+                                   oninput="this.setCustomValidity('')"
+                                   placeholder="Вашето име">
+                        </div>
+                        <div>
+                            <label for="email">е-mail:</label>
+                            <input type="email" id="email" name="email" required
+                                   oninvalid="this.setCustomValidity('Моля, въведете e-mail-а or!')"
+                                   oninput="this.setCustomValidity('')"
+                                   placeholder="Вашата електронна поща">
+                        </div>
+                     </div>
                     <div>
-                        <label for="email">е-mail:</label>
-                        <input type="email" id="email" name="email" required
-                               oninvalid="this.setCustomValidity('Моля, въведете e-mail-а or!')"
-                               oninput="this.setCustomValidity('')"
-                               placeholder="Вашата електронна поща">
-                    </div>
-                    <div>
+                        <br>
                         <label for="message">Съобщение:</label>
-                        <textarea id="message" name="message" required
+                    <div>
+                    </div>
+                        <textarea id="message" class="textarea-contact" name="message" required
                                   oninvalid="this.setCustomValidity('Моля, попълнете съобщение!')"
                                   oninput="this.setCustomValidity('')"
                                   placeholder="Текст на съобщението">
                         </textarea>
                     </div>
                     <div>
+                     <br>
                         <button type="submit">Изпрати</button>
                     </div>
                 </form>
             </div>
-            <!--        </div>-->
-<!--            <div id="map" class="slider-container"></div>-->
-            <div id="map" class=></div>
         </div>
-<!--        <div>-->
-<!--            <div>-->
-<!--                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2764.555016041253!2d27.905173075977007!3d43.199769771127244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40a453f2f4b4f461%3A0x3469a75b61a45a2e!2sCenterOdesos%2C%20ul.%20%22Debar%22%2058%2C%209000%20Varna!5e1!3m2!1sen!2sbg!4v1739994077600!5m2!1sen!2sbg"-->
-<!--                        width="400" height="485" style="border:0;" allowfullscreen="" loading="lazy"-->
-<!--                        referrerpolicy="no-referrer-when-downgrade"></iframe>-->
-<!--            </div>-->
-<!--    </div>-->
-    <div class="simple-container">
+
+    <div class="contact-container">
+        <div class="contact-iframe">
+            <div class="imitator">
+                <img src="resources/imitator.jpg" alt="">
+            </div>
+<!--            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2764.555016041253!2d27.905173075977007!3d43.199769771127244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40a453f2f4b4f461%3A0x3469a75b61a45a2e!2sCenterOdesos%2C%20ul.%20%22Debar%22%2058%2C%209000%20Varna!5e1!3m2!1sen!2sbg!4v1739994077600!5m2!1sen!2sbg"-->
+<!--                    width="400" height="485" style="border:0;" allowfullscreen="" loading="lazy"-->
+<!--                    referrerpolicy="no-referrer-when-downgrade"></iframe>-->
+        </div>
     </div>
 </main>
 <!--// Зареждаме Google Maps API-->
 </body>
 <footer>
-    <div id="footer-container"></div>
+    <div class="footer-content">
+        <p class=>© 2025 Съни Динева | ФН 72624118</p>
+        <div class="social-icons">
+            <a href="https://instagram.com" target="_blank">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M7.5 2C4.46 2 2 4.46 2 7.5V16.5C2 19.54 4.46 22 7.5 22H16.5C19.54 22 22 19.54 22 16.5V7.5C22 4.46 19.54 2 16.5 2H7.5ZM18 4C18.55 4 19 4.45 19 5C19 5.55 18.55 6 18 6C17.45 6 17 5.55 17 5C17 4.45 17.45 4 18 4ZM12 6C15.31 6 18 8.69 18 12C18 15.31 15.31 18 12 18C8.69 18 6 15.31 6 12C6 8.69 8.69 6 12 6ZM12 8C9.79 8 8 9.79 8 12C8 14.21 9.79 16 12 16C14.21 16 16 14.21 16 12C16 9.79 14.21 8 12 8Z"/>
+                </svg>
+            </a>
+            <a href="https://facebook.com" target="_blank">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M17 2H14C11.24 2 9 4.24 9 7V10H6V14H9V22H13V14H16L17 10H13V7C13 6.45 13.45 6 14 6H17V2Z"/>
+                </svg>
+            </a>
+            <a href="https://twitter.com" target="_blank">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M22 5.924C21.257 6.243 20.467 6.45 19.644 6.524C20.487 6.023 21.122 5.257 21.447 4.364C20.667 4.831 19.807 5.165 18.897 5.347C18.157 4.569 17.054 4.077 15.83 4.077C13.709 4.077 12 5.785 12 7.905C12 8.195 12.035 8.478 12.104 8.75C8.721 8.586 5.735 6.924 3.736 4.367C3.391 5.037 3.196 5.831 3.196 6.667C3.196 8.155 3.975 9.455 5.084 10.198C4.435 10.184 3.81 10.016 3.265 9.737V9.788C3.265 11.822 4.717 13.478 6.603 13.828C6.263 13.926 5.901 13.98 5.528 13.98C5.255 13.98 4.988 13.958 4.732 13.911C5.273 15.545 6.78 16.719 8.515 16.751C7.158 17.84 5.475 18.482 3.669 18.482C3.299 18.482 2.937 18.462 2.58 18.424C4.336 19.583 6.46 20.267 8.74 20.267C15.822 20.267 19.963 13.98 19.963 8.401C19.963 8.213 19.959 8.027 19.951 7.843C20.737 7.299 21.41 6.587 22 5.924Z"/>
+                </svg>
+            </a>
+        </div>
+    </div>
 </footer>
+<script src="js/navButtonListener.js"></script>
 </html>
-
-<!--</main>-->
-<!--</body>-->
-<!--<footer>-->
-<!--    <div id="footer-container"></div>-->
-<!--</footer>-->
-<!--</html>-->
-
