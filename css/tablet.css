@@ -149,27 +149,24 @@
     }
 
     .slider-container {
-        width: 80vw;
         margin: 20px auto;
         overflow: hidden;
     }
 
     .slide-img {
-        width: 80vw;
         height: auto;
     }
 
     /* позиции на бутоните  до картинката*/
     .prev {
-        left: 20vw;
-        top: 26%;
-        transform: translateX(1vw);
+        left: 2px;
+        top: 50%;
+        transform: translatey(-50%);  /* -60 e в десктоп и да изравня*/
     }
 
     .next {
-        right: 18vw;
-        top: 26%;
-        transform: translateX(-3vw);
+        right: 2px;
+        top: 50%;
     }
 
     ::placeholder {

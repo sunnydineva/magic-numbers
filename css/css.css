@@ -367,7 +367,7 @@ li.dropdown { /* главно меню - dropdown*/
 .image-2-container img {
     width: 47%;
     border-radius: 10px; /* Закръглени ръбове */
-    box-shadow: 0 0 30px rgb(6, 47, 92);
+    /*box-shadow: 0 0 60px rgba(6, 47, 92, 0.82);*/
 }
 
 /* контейнер за текста в мейн контейнера */
@@ -454,6 +454,7 @@ li.dropdown { /* главно меню - dropdown*/
 /* =================== СЛАЙДЕР =======================*/
 /*Слайдер контейнер*/
 .slider-container {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -475,16 +476,16 @@ li.dropdown { /* главно меню - dropdown*/
     display: none;
     width: 150%;
     /*height: 100%;*/
+    /*box-shadow: 0 0 30px #11114b;*/
     text-align: center;
     border-radius: 10px;
+    overflow: hidden;
 }
 
 .slide-img img {
     width: 49vw;
     height: auto;
     border-radius: 10px;
-    box-shadow: 0 8px 16px 0 rgb(51, 51, 52);
-    /*object-fit: cover; !*запълване без изкривяване*!*/
 }
 
 .slide-img:first-child {
@@ -496,6 +497,7 @@ li.dropdown { /* главно меню - dropdown*/
     position: absolute;
     /*transform: translateY(-50%);*/
     /*transform: translateX(50%);*/
+    top: 50%;
     border: none;
     font-size: 24px;
     margin: 0 auto;
@@ -511,10 +513,16 @@ li.dropdown { /* главно меню - dropdown*/
 
 /* позиции на бутоните  до картинката*/
 .prev {
-    transform: translateX(15vw);
+    position: absolute;
+    left: 1px;              /* отстояние от лявата страна */
+    top: 50%;                /*  вертикално в релатив контейнера */
+    transform: translateY(-60%);
 }
 .next {
-    transform: translateX(-10vw);
+    position: absolute;
+    right: 1px;
+    top: 50%;                /*  вертикално */
+    transform: translateY(-50%);
 }
 
 .prev, .next {
@@ -530,16 +538,8 @@ li.dropdown { /* главно меню - dropdown*/
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-.prev {
-    left: 10vw;
-}
-
-.next {
-    right: 15vw;
-}
 
 /* =================== ТАБЛИЦИ =======================*/
-
 
 th{
     border-top: solid;

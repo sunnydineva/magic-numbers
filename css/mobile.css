@@ -128,15 +128,15 @@
 
     /* позиции на бутоните  до картинката*/
     .prev {
-        left: 1vw;
-        top: 35%;
-        transform: translateX(1vw);
+        left: 2px;
+        /*top: 20%;*/
+        transform: translateX(-10%);
     }
 
     .next {
-        right: 1vw;
-        top: 35%;
-        transform: translateX(-1vw);
+        right: 12px;
+        /*top: 50%;*/
+        transform: translateX(20%);
     }
 
     /* mobile */
