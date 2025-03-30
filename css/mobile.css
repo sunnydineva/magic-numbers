@@ -278,6 +278,15 @@
     }
     /*/  анимация на хамбургера при клик*/
 
+    #navMenu {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease-in-out;
+    }
+
+    #navMenu.show {
+        max-height: 500px; /* или колкото е нужно */
+    }
 
     nav ul {
         display: none;
@@ -303,6 +312,10 @@
         width: 100%;
         overflow: hidden;
         border-radius: 10px;
+    }
+
+    nav a{
+        -webkit-tap-highlight-color: transparent;    /*  премигване при докосване премахва */
     }
 
     /*  подменютата да не се показват по подразбиране на мобилни */
