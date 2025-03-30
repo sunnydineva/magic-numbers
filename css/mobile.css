@@ -83,6 +83,7 @@
 
     .image-text-container {
         display: inline-block;
+        margin-bottom: 0;   /* само в индекс страницата - първи контейнер, след него следва main-container - */
     }
 
     .main-contact {
@@ -208,6 +209,8 @@
 
     /*навигационно меню*/
     .hamburger {
+        font-size: 2rem;
+        font-weight: bold;
         cursor: pointer;
         color: white;
         background: none;
@@ -215,21 +218,66 @@
         position: absolute;
         top: 10px;
         right: 20px;
-        font-size: 60px;
+        /*font-size: 60px;*/
         width: 80px;
         height: 80px;
         padding-bottom: 28px;
         display: flex;
         align-items: center;       /* вертикално центриране */
         justify-content: center;   /* хоризонтално центриране */
+        transition: transform 0.2s ease-in-out;
+        -webkit-tap-highlight-color: transparent;
     }
 
     .hamburger:hover {
-        background-color: #212124 !important;
+        /*background-color: #212124 !important;*/
+        background-color: transparent !important;
         opacity: 0.5;
         transform: scale(1.1);
         transition: all 0.5s ease;
     }
+
+    .hamburger:active {
+        transform: scale(1.1);
+        color: #FFD700;
+    }
+
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 22px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        z-index: 20;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    /*анимация на хамбургера при клик*/
+    .hamburger span {     /*'чертичката от ☰'*/
+        height: 4px;
+        width: 100%;
+        background-color: white;
+        border-radius: 2px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .hamburger.open span:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+
+    .hamburger.open span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.open span:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+    /*/  анимация на хамбургера при клик*/
+
 
     nav ul {
         display: none;
@@ -241,6 +289,7 @@
         right: 0;
         width: 50%;
         opacity: 0.80; /* прозрачност само за списъка */
+        margin-right: 5px;
     }
 
     nav ul.show {
@@ -248,6 +297,7 @@
     }
 
     nav li {
+        font-weight: bold;
         float: none;
         text-align: center;
         width: 100%;
@@ -259,18 +309,22 @@
     .dropdown-content {
         display: none;
         position: relative;
-        background-color: #2c3e50;
+        background-color: #2d3743;
         width: 100%;
         margin-right: 300vw;
         box-shadow: none;
         font-weight: bold;
-        opacity: 0.99;
+        opacity: 0.99; !important;
     }
 
     /* когато подменюто е активно - видимо */
     .dropdown.active .dropdown-content {
         display: block;
+        background-color: #111; /* активен dd - черно */
+        transform: scale(1.2) translateX(-10px); /* Уголемено и леко наляво */
+        transition: transform 0.3s ease-in-out;
     }
+
 
     /* подменютата */
     .dropdown-content a {
@@ -278,8 +332,10 @@
         padding: 10px;
         border-radius: 10px;
         display: block;
+        color: #6193ca;
+        transform: scale(1) translateX(0);
+        transition: transform 0.3s ease-in-out;
     }
-
 
     .main-begin {
         margin-top: 9vh;
@@ -289,6 +345,13 @@
     .img-result {
         width: 80%;
         margin: 2vh auto;
+    }
+
+    .footer-content{
+        margin-top: 20px;
+    /*height: 30px;*/
+        /*display: block;*/
+        border: #FFD700;
     }
 
 }

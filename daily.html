@@ -28,7 +28,11 @@
 
 
         <nav>
-            <button class="hamburger" onclick="toggleMenu()">☰</button>
+            <button class="hamburger" onclick="this.classList.toggle('open'); toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <ul id="navMenu">
                 <li>
                     <a href="index.html">Начало</a>
