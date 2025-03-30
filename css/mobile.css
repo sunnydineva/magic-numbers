@@ -147,6 +147,11 @@
         box-shadow: none;
     }
 
+    .prev:hover, .next:hover {
+        background-color: transparent;
+    }
+
+
     /* mobile */
     .simple-container image {
         width: 100%;
