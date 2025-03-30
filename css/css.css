@@ -230,11 +230,6 @@ li.dropdown { /* главно меню - dropdown*/
     text-decoration: none; /* Премахва подчертаването */
 }
 
-.header-logo-container a:visited {
-    color: inherit; /* спира лилавото */
-    outline: none;
-}
-
 .header-logo-container a,
 .header-logo-container a:visited,
 .header-logo-container h1,
