@@ -147,8 +147,8 @@
         box-shadow: none;
     }
 
-    .prev:hover, .next:hover {
-        background-color: transparent;
+    .slider-container button:hover {
+        background-color: transparent !important
     }
 
 
