@@ -235,11 +235,14 @@ li.dropdown { /* главно меню - dropdown*/
     outline: none;
 }
 
-/*.header-logo-container h1:visited {*/
-/*    color: transparent;*/
-/*    text-decoration: none;*/
-/*    outline: none;*/
-/*}*/
+.header-logo-container a,
+.header-logo-container a:visited,
+.header-logo-container h1,
+.header-logo-container h1:visited {
+    color: transparent;
+    text-decoration: none;
+    outline: none;
+}
 
 .logo {
     width: auto;
@@ -252,7 +255,6 @@ li.dropdown { /* главно меню - dropdown*/
     outline: none;
 }
 
-
 .header-sticky {
     /*height: 60px;*/
     z-index:1;
@@ -260,7 +262,6 @@ li.dropdown { /* главно меню - dropdown*/
     top: 0;
     width: 100%;
     background-color: #708896;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /*====================================================================*/
