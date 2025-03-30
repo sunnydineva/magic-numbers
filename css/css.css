@@ -525,8 +525,7 @@ li.dropdown { /* главно меню - dropdown*/
 }
 
 .slider-container button:hover {
-    /*background-color: rgba(0, 0, 0, 0.6);*/
-    background-color: rgba(123, 10, 10, 0.6);
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
 /* позиции на бутоните  до картинката*/
